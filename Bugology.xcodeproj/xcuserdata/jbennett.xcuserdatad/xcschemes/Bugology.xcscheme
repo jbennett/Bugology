@@ -48,6 +48,36 @@
                ReferencedContainer = "container:Bugology.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BDF14D31C3D82D900465FA3"
+               BuildableName = "SifterSwiftTests.xctest"
+               BlueprintName = "SifterSwiftTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BDF151B1C3D842400465FA3"
+               BuildableName = "BugologyCoreTests.xctest"
+               BlueprintName = "BugologyCoreTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B504A8F1C3D85B700E89117"
+               BuildableName = "BugCoreTests.xctest"
+               BlueprintName = "BugCoreTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
