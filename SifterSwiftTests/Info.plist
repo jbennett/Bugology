@@ -4,8 +4,6 @@
 <dict>
 	<key>Sifter Domain</key>
 	<string>$(SIFTER_DOMAIN)</string>
-	<key>Sifter User</key>
-	<string>$(SIFTER_USER)</string>
 	<key>Sifter Token</key>
 	<string>$(SIFTER_TOKEN)</string>
 	<key>CFBundleDevelopmentRegion</key>

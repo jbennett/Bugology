@@ -6,6 +6,5 @@
 //  Copyright © 2016 Jonathan Bennett. All rights reserved.
 //
 
-SIFTER_DOMAIN = YOUR_DOMAIN
-SIFTER_USER = YOUR_USER
-SIFTER_TOKEN = YOUR_TOKEN
+SIFTER_DOMAIN = jbennett
+SIFTER_TOKEN = d4a0812cc24e2abdbb0ead68339e9d84
