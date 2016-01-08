@@ -8,6 +8,7 @@
 
 import Foundation
 import BrightFutures
+import Result
 
 typealias JSON = [String: AnyObject]
 
@@ -42,21 +43,19 @@ public class NetworkClient {
   }
 
   func getJSONResource(resource: String) -> Future<JSON, NSError> {
-    let promise = Promise<JSON, NSError>()
+    return getResource(resource).flatMap(self.parseJSON)
+  }
 
-    getResource(resource).onSuccess { data in
-      do {
-        if let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? JSON {
-          promise.success(json)
-        } else {
-          promise.failure(NSError(domain: "adsf", code: 1, userInfo: nil))
-        }
-      } catch let error as NSError {
-        promise.failure(error)
+  private func parseJSON(data: NSData) -> Result<JSON, NSError> {
+    do {
+      if let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as? JSON {
+        return .Success(json)
+      } else {
+        return .Failure(NSError(domain: "asdf", code: 1, userInfo: nil)) // TODO: correct this
       }
+    } catch let error as NSError {
+      return .Failure(error)
     }
-
-    return promise.future
   }
 
 }
