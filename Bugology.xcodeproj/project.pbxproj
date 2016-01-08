@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
+		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
+		3B57FA701C402D5900BD4055 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */; };
+		3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */; };
+		3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA741C40502C00BD4055 /* AccountsViewController.swift */; };
+		3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */; };
+		3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */; };
+		3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */; };
+		3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */; };
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
-		3BDF149E1C3D80A200465FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149C1C3D80A200465FA3 /* Main.storyboard */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -31,9 +38,16 @@
 /* Begin PBXFileReference section */
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
+		3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsCoordinator.swift; sourceTree = "<group>"; };
+		3B57FA741C40502C00BD4055 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorsCollection.swift; sourceTree = "<group>"; };
+		3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountCoordinator.swift; sourceTree = "<group>"; };
+		3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
+		3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDataSource.swift; sourceTree = "<group>"; };
 		3BDF14951C3D80A200465FA3 /* Bugology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF14981C3D80A200465FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BDF149D1C3D80A200465FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BDF14A21C3D80A200465FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BDF14A41C3D80A200465FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +75,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3B57FA691C4022D100BD4055 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BDF14A41C3D80A200465FA3 /* Info.plist */,
+				3BDF14981C3D80A200465FA3 /* AppDelegate.swift */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		3B57FA6A1C4022DF00BD4055 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3BDF149F1C3D80A200465FA3 /* Assets.xcassets */,
+				3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		3B57FA6B1C4022F700BD4055 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */,
+				3B57FA741C40502C00BD4055 /* AccountsViewController.swift */,
+				3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3B57FA6E1C402D4C00BD4055 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */,
+				3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */,
+				3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
+		3B57FA761C4050B300BD4055 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3B57FA7D1C40604700BD4055 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA7E1C40605000BD4055 /* Data Sources */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3B57FA7E1C40605000BD4055 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */,
+			);
+			name = "Data Sources";
+			sourceTree = "<group>";
+		};
 		3BDF148C1C3D80A200465FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -81,11 +157,12 @@
 		3BDF14971C3D80A200465FA3 /* Bugology */ = {
 			isa = PBXGroup;
 			children = (
-				3BDF14981C3D80A200465FA3 /* AppDelegate.swift */,
-				3BDF149C1C3D80A200465FA3 /* Main.storyboard */,
-				3BDF149F1C3D80A200465FA3 /* Assets.xcassets */,
-				3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */,
-				3BDF14A41C3D80A200465FA3 /* Info.plist */,
+				3B57FA6A1C4022DF00BD4055 /* Assets */,
+				3B57FA6E1C402D4C00BD4055 /* Coordinators */,
+				3B57FA761C4050B300BD4055 /* Models */,
+				3B57FA6B1C4022F700BD4055 /* View Controllers */,
+				3B57FA7D1C40604700BD4055 /* Utilities */,
+				3B57FA691C4022D100BD4055 /* Support Files */,
 			);
 			path = Bugology;
 			sourceTree = "<group>";
@@ -154,7 +231,6 @@
 			files = (
 				3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */,
 				3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */,
-				3BDF149E1C3D80A200465FA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,21 +287,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */,
+				3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */,
 				3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */,
+				3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */,
+				3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */,
+				3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */,
+				3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */,
+				3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */,
+				3B57FA701C402D5900BD4055 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3BDF149C1C3D80A200465FA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BDF149D1C3D80A200465FA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,6 +409,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.Bugology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,6 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.Bugology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

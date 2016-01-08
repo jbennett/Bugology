@@ -12,9 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+  var applicationCoordinator: ApplicationCoordinator?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+
+    let window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    window.makeKeyAndVisible()
+    self.window = window
+
+    let coordinator = ApplicationCoordinator()
+    coordinator.installIntoWindow(window)
+    coordinator.showAccountsList()
+    self.applicationCoordinator = coordinator
+
     return true
   }
 
