@@ -21,7 +21,7 @@ public enum Service: String {
     switch self {
     case .Bitbucket: return UIViewController()
     case .Github: return UIViewController()
-    case .Sifter: return SifterLoginViewController()
+    case .Sifter: return SifterLoginViewController.fromStoryboard()
     }
   }
 
