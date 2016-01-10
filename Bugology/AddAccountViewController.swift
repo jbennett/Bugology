@@ -10,6 +10,8 @@ import UIKit
 
 public class AddAccountTypeViewController: UITableViewController {
 
+  public weak var delegate: AddAccountTypeViewControllerDelegate?
+
   let dataSource = SimpleDataSource<Service>(data: Service.allServices(), cellIdentifier: "Basic Cell")
 
   public override func viewDidLoad() {
@@ -24,6 +26,16 @@ public class AddAccountTypeViewController: UITableViewController {
   func configureCell(cell: UITableViewCell, service: Service) {
     cell.textLabel?.text = service.rawValue
   }
+
+  public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let service = dataSource.objectAtIndexPath(indexPath)
+    delegate?.addAccountTypeViewController(self, didSelectService: service)
   }
+
+}
+
+public protocol AddAccountTypeViewControllerDelegate: class {
+
+  func addAccountTypeViewController(addAccountTypeViewController: AddAccountTypeViewController, didSelectService service: Service)
 
 }

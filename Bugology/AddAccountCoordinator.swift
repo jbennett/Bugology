@@ -13,6 +13,7 @@ public class AddAccountCoordinator {
   public weak var delegate: AddAccountCoordinatorDelegate?
 
   let rootViewController: UIViewController
+  var navigationController: UINavigationController?
 
   public init(rootViewController: UIViewController) {
     self.rootViewController = rootViewController
@@ -20,13 +21,23 @@ public class AddAccountCoordinator {
 
   public func beginAddingAccount(animated: Bool = true) {
     let accountTypeViewController = AddAccountTypeViewController()
-    let navigationController = UINavigationController(rootViewController: accountTypeViewController)
+    accountTypeViewController.delegate = self
+    navigationController = UINavigationController(rootViewController: accountTypeViewController)
 
-    rootViewController.presentViewController(navigationController, animated: animated, completion: nil)
+    rootViewController.presentViewController(navigationController!, animated: animated, completion: nil)
   }
 
 }
 
 public protocol AddAccountCoordinatorDelegate: class {
+
+}
+
+extension AddAccountCoordinator: AddAccountTypeViewControllerDelegate {
+
+  public func addAccountTypeViewController(addAccountTypeViewController: AddAccountTypeViewController, didSelectService service: Service) {
+    let viewController = service.loginViewController()
+    navigationController?.showViewController(viewController, sender: nil)
+  }
 
 }
