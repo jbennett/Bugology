@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 public class AddAccountCoordinator {
 
@@ -37,7 +38,17 @@ extension AddAccountCoordinator: AddAccountTypeViewControllerDelegate {
 
   public func addAccountTypeViewController(addAccountTypeViewController: AddAccountTypeViewController, didSelectService service: Service) {
     let viewController = service.loginViewController()
+    viewController.delegate = self
     navigationController?.showViewController(viewController, sender: nil)
+  }
+
+}
+
+extension AddAccountCoordinator: LoginViewControllerDelegate {
+
+  public func loginViewController(viewController: LoginViewController, didRequestWebviewForURL url: NSURL) {
+    let webview = SFSafariViewController(URL: url)
+    navigationController?.showViewController(webview, sender: nil)
   }
 
 }

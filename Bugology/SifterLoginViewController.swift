@@ -7,25 +7,21 @@
 //
 
 import UIKit
-import SafariServices
 
 // todo: update token field from pasteboard
 
-public class SifterLoginViewController: UIViewController {
+public class SifterLoginViewController: LoginViewController {
 
   @IBOutlet weak var domainField: UITextField!
   @IBOutlet weak var tokenField: UITextField!
   @IBOutlet weak var tokenButton: UIButton!
 
-  public weak var delegate: SifterLoginViewControllerDelegate?
-
   public override func viewDidLoad() {
     super.viewDidLoad()
     title = "Sifter"
-    delegate = self
   }
 
-  public static func fromStoryboard() -> SifterLoginViewController {
+  public override class func fromStoryboard() -> SifterLoginViewController {
     let storyboard = UIStoryboard(name: "LoginViewControllers", bundle: nil)
     guard let viewController = storyboard.instantiateViewControllerWithIdentifier("SifterLoginViewController") as? SifterLoginViewController else {
       abort()
@@ -42,17 +38,10 @@ public class SifterLoginViewController: UIViewController {
     }
   }
 
-  // TODO: extract to coordinator
   @IBAction private func didTapDomainButton() {
-    delegate?.didRequestTokenPageForSifterLoginViewController(self)
-    
-    guard let url = tokenURL() else {
-      // TODO: notify
-      return
-    }
+    guard let url = tokenURL() else { return  }
 
-    let webVC = SFSafariViewController(URL: url)
-    self.showViewController(webVC, sender: nil)
+    delegate?.loginViewController(self, didRequestWebviewForURL: url)
   }
 
   private func tokenURL() -> NSURL? {
@@ -64,27 +53,7 @@ public class SifterLoginViewController: UIViewController {
   @IBAction private func didTapLogin() {
     domainField.resignFirstResponder()
     tokenField.resignFirstResponder()
-    delegate?.authRequestForSifterLoginViewController(self)
+//    delegate?.authRequestForSifterLoginViewController(self)
   }
-
-}
-
-// todo: remove after testing
-extension SifterLoginViewController: SifterLoginViewControllerDelegate {
-  
-  public func didRequestTokenPageForSifterLoginViewController(loginViewController: SifterLoginViewController) {
-    
-  }
-  
-  public func authRequestForSifterLoginViewController(loginViewController: SifterLoginViewController) {
-    self.dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-}
-
-public protocol SifterLoginViewControllerDelegate: class {
-
-  func didRequestTokenPageForSifterLoginViewController(loginViewController: SifterLoginViewController)
-  func authRequestForSifterLoginViewController(loginViewController: SifterLoginViewController)
 
 }

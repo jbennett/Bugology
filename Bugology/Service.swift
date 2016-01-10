@@ -17,10 +17,10 @@ public enum Service: String {
     return [.Bitbucket, .Github, .Sifter]
   }
 
-  public func loginViewController() -> UIViewController {
+  public func loginViewController() -> LoginViewController {
     switch self {
-    case .Bitbucket: return UIViewController()
-    case .Github: return UIViewController()
+    case .Bitbucket: return LoginViewController()
+    case .Github: return LoginViewController()
     case .Sifter: return SifterLoginViewController.fromStoryboard()
     }
   }
