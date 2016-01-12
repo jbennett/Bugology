@@ -26,3 +26,16 @@ public struct Account {
   }
 
 }
+
+extension Account: Equatable {}
+public func == (lhs: Account, rhs: Account) -> Bool {
+  return lhs.username == rhs.username && lhs.password == rhs.password &&
+    lhs.token == rhs.token && lhs.domain == rhs.domain &&
+    lhs.serviceType == rhs.serviceType
+}
+
+extension Account: Hashable {
+  public var hashValue: Int {
+    return "\(username),\(password),\(token),\(domain),\(serviceType)".hashValue
+  }
+}

@@ -42,4 +42,10 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
 // Mark: Add Account Coordinator
 extension ApplicationCoordinator: AddAccountCoordinatorDelegate {
 
+  public func addAccountCoordinator(addAccountCoordinator: AddAccountCoordinator, didAddAccount account: Account) {
+    rootViewController.dismissViewControllerAnimated(true, completion: nil)
+
+    print("reload accounts")
+  }
+
 }

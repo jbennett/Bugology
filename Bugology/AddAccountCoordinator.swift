@@ -12,6 +12,7 @@ import SafariServices
 public class AddAccountCoordinator {
 
   public weak var delegate: AddAccountCoordinatorDelegate?
+  var accountRepository: AccountRepository = UserDefaultsAccountRepository()
 
   let rootViewController: UIViewController
   var navigationController: UINavigationController?
@@ -31,6 +32,8 @@ public class AddAccountCoordinator {
 }
 
 public protocol AddAccountCoordinatorDelegate: class {
+
+  func addAccountCoordinator(addAccountCoordinator: AddAccountCoordinator, didAddAccount account: Account)
 
 }
 
@@ -54,9 +57,19 @@ extension AddAccountCoordinator: LoginViewControllerDelegate {
   public func loginViewController(viewController: LoginViewController, didSubmitAccount account: Account) {
     let client = ClientFactory().clientForAccount(account)
 
-    client.isAccountValid().map { valid in
-      print(valid)
+    client.isAccountValid().map { [weak self] valid in
+      if valid {
+        self?.accountRepository.saveAccount(account).map { _ in
+          if let this = self {
+            this.delegate?.addAccountCoordinator(this, didAddAccount: account)
+          }
+        }
+      } else {
+        // todo: handle failures
+      }
     }
+
+    // todo: handle errors
   }
 
 }

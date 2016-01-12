@@ -28,6 +28,9 @@
 		3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86076E1C44A36E009D20F4 /* SifterClient.swift */; };
 		3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607701C44A3F0009D20F4 /* GitHubClient.swift */; };
 		3B8607731C44A40A009D20F4 /* BitBucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607721C44A40A009D20F4 /* BitBucketClient.swift */; };
+		3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607751C455911009D20F4 /* AccountRepository.swift */; };
+		3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */; };
+		3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86077A1C4571C9009D20F4 /* Distinct.swift */; };
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
@@ -68,6 +71,9 @@
 		3B86076E1C44A36E009D20F4 /* SifterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterClient.swift; sourceTree = "<group>"; };
 		3B8607701C44A3F0009D20F4 /* GitHubClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubClient.swift; sourceTree = "<group>"; };
 		3B8607721C44A40A009D20F4 /* BitBucketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitBucketClient.swift; sourceTree = "<group>"; };
+		3B8607751C455911009D20F4 /* AccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
+		3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsAccountRepository.swift; sourceTree = "<group>"; };
+		3B86077A1C4571C9009D20F4 /* Distinct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distinct.swift; sourceTree = "<group>"; };
 		3BDF14951C3D80A200465FA3 /* Bugology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF14981C3D80A200465FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -199,6 +205,23 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		3B8607741C455900009D20F4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3B8607751C455911009D20F4 /* AccountRepository.swift */,
+				3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		3B8607791C4571BC009D20F4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3B86077A1C4571C9009D20F4 /* Distinct.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		3BDF148C1C3D80A200465FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -220,9 +243,11 @@
 			isa = PBXGroup;
 			children = (
 				3B57FA6A1C4022DF00BD4055 /* Assets */,
+				3B8607791C4571BC009D20F4 /* Categories */,
 				3B57FA6E1C402D4C00BD4055 /* Coordinators */,
 				3B8607681C44A2D7009D20F4 /* Factories */,
 				3B57FA761C4050B300BD4055 /* Models */,
+				3B8607741C455900009D20F4 /* Repositories */,
 				3B86076B1C44A34F009D20F4 /* Services */,
 				3B57FA6B1C4022F700BD4055 /* View Controllers */,
 				3B8607671C449614009D20F4 /* Services */,
@@ -356,7 +381,9 @@
 			files = (
 				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
 				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
+				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
 				3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */,
+				3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */,
 				3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */,
 				3B86076A1C44A2EA009D20F4 /* ClientFactory.swift in Sources */,
 				3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */,
@@ -366,6 +393,7 @@
 				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
 				3B57FA821C40653300BD4055 /* Service.swift in Sources */,
 				3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */,
+				3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */,
 				3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */,
 				3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */,
 				3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */,
