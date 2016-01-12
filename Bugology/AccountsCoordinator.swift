@@ -11,6 +11,7 @@ import UIKit
 public class AccountsCoordinator {
 
   public weak var delegate: AccountsCoordinatorDelegate?
+  var accountRepository: AccountRepository = UserDefaultsAccountRepository()
 
   var accountsViewController: AccountsViewController?
   let rootViewController: UIViewController
@@ -23,7 +24,13 @@ public class AccountsCoordinator {
     accountsViewController = AccountsViewController()
     rootViewController.showViewController(accountsViewController!, sender: nil)
 
-    delegate?.noAccountsForAccountCoordinator(self)
+    accountRepository.getAccounts().onSuccess { accounts in
+      if accounts.count == 0 {
+        self.delegate?.noAccountsForAccountCoordinator(self)
+      }
+      
+      self.accountsViewController?.dataSource.data = accounts
+    }
   }
 
 }

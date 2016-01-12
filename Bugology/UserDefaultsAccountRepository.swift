@@ -18,11 +18,13 @@ public class UserDefaultsAccountRepository: AccountRepository {
   public init() {}
 
   public func getAccounts() -> Future<[Account], NoError> {
-    print(userDefaults.objectForKey(accountsStorageKey))
-    let data = userDefaults.objectForKey(accountsStorageKey) as? NSData
-
-    // return future(accounts)
-    return future([])
+    guard let data = userDefaults.objectForKey(accountsStorageKey) as? NSData,
+    let dictionary = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [NSDictionary] else {
+      return future([])
+    }
+    let accounts = dictionary.map { Account(dictionary: $0) }
+    
+    return future(accounts)
   }
 
   public func saveAccount(account: Account) -> Future<Bool, NoError> {
