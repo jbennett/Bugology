@@ -51,4 +51,12 @@ extension AddAccountCoordinator: LoginViewControllerDelegate {
     navigationController?.showViewController(webview, sender: nil)
   }
 
+  public func loginViewController(viewController: LoginViewController, didSubmitAccount account: Account) {
+    let client = ClientFactory().clientForAccount(account)
+
+    client.isAccountValid().map { valid in
+      print(valid)
+    }
+  }
+
 }

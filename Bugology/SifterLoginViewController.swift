@@ -53,7 +53,14 @@ public class SifterLoginViewController: LoginViewController {
   @IBAction private func didTapLogin() {
     domainField.resignFirstResponder()
     tokenField.resignFirstResponder()
-//    delegate?.authRequestForSifterLoginViewController(self)
+    delegate?.loginViewController(self, didSubmitAccount: accountFromCurrentFields())
+  }
+
+  private func accountFromCurrentFields() -> Account {
+    let domain = domainField.text ?? ""
+    let token = tokenField.text ?? ""
+
+    return Account(domain: domain, token: token, serviceType: Service.Sifter)
   }
 
 }

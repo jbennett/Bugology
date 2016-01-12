@@ -21,12 +21,13 @@ public class LoginViewController: UIViewController {
 public protocol LoginViewControllerDelegate: class {
 
   func loginViewController(viewController: LoginViewController, didRequestWebviewForURL url: NSURL)
+  func loginViewController(viewController: LoginViewController, didSubmitAccount account: Account)
 
 }
 
 //public protocol SifterLoginViewControllerDelegate: class {
-//  
+//
 //  func didRequestTokenPageForSifterLoginViewController(loginViewController: SifterLoginViewController)
 //  func authRequestForSifterLoginViewController(loginViewController: SifterLoginViewController)
-//  
+//
 //}
