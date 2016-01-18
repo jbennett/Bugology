@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */; };
+		3B219E641C4D558800457A9E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E631C4D558800457A9E /* Project.swift */; };
+		3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E651C4D55B800457A9E /* ProjectsViewController.swift */; };
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
 		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCoordinator.swift; sourceTree = "<group>"; };
+		3B219E631C4D558800457A9E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		3B219E651C4D55B800457A9E /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */,
 				3B57FA741C40502C00BD4055 /* AccountsViewController.swift */,
 				3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */,
+				3B219E651C4D55B800457A9E /* ProjectsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 				3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */,
 				3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */,
 				3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */,
+				3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */,
 			);
 			name = Coordinators;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 				3B8607651C4492B6009D20F4 /* Account.swift */,
 				3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */,
 				3B57FA811C40653300BD4055 /* Service.swift */,
+				3B219E631C4D558800457A9E /* Project.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -379,6 +388,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */,
+				3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */,
 				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
 				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
 				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
@@ -392,6 +403,7 @@
 				3B86076D1C44A360009D20F4 /* Client.swift in Sources */,
 				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
 				3B57FA821C40653300BD4055 /* Service.swift in Sources */,
+				3B219E641C4D558800457A9E /* Project.swift in Sources */,
 				3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */,
 				3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */,
 				3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */,

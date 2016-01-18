@@ -12,6 +12,7 @@ let accountCellIdentifier = "Account Cell";
 
 public class AccountsViewController: UITableViewController {
 
+  public weak var delegate: AccountsViewControllerDelegate?
   var dataSource = SimpleDataSource<Account>(data: [], cellIdentifier: accountCellIdentifier)
 
   public override func viewDidLoad() {
@@ -23,9 +24,20 @@ public class AccountsViewController: UITableViewController {
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
   }
+  
+  public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let account = dataSource.objectAtIndexPath(indexPath)
+    delegate?.accountsViewController(self, didSelectAccount: account)
+  }
 
   private func configureCell(cell: UITableViewCell, account: Account) {
     cell.textLabel?.text = "\(account.serviceType): \(account.domain)"
   }
 
+}
+
+public protocol AccountsViewControllerDelegate: class {
+  
+  func accountsViewController(viewController: AccountsViewController, didSelectAccount account: Account)
+  
 }

@@ -36,6 +36,13 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
     addAccountCoordinator.beginAddingAccount(false)
     childCoordinators.addCoordinator(addAccountCoordinator)
   }
+  
+  public func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account) {
+    let client = ClientFactory().clientForAccount(account)
+    let projectsCoordinator = ProjectsCoordinator(account: account, client: client, rootViewController: rootViewController)
+    projectsCoordinator.showProjects()
+    childCoordinators.addCoordinator(projectsCoordinator)
+  }
 
 }
 

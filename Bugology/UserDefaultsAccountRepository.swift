@@ -23,7 +23,7 @@ public class UserDefaultsAccountRepository: AccountRepository {
       return future([])
     }
     let accounts = dictionary.map { Account(dictionary: $0) }
-    
+
     return future(accounts)
   }
 

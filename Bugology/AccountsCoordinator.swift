@@ -22,15 +22,24 @@ public class AccountsCoordinator {
 
   public func showAccounts() {
     accountsViewController = AccountsViewController()
+    accountsViewController?.delegate = self
     rootViewController.showViewController(accountsViewController!, sender: nil)
 
     accountRepository.getAccounts().onSuccess { accounts in
       if accounts.count == 0 {
         self.delegate?.noAccountsForAccountCoordinator(self)
       }
-      
+
       self.accountsViewController?.dataSource.data = accounts
     }
+  }
+
+}
+
+extension AccountsCoordinator: AccountsViewControllerDelegate {
+
+  public func accountsViewController(viewController: AccountsViewController, didSelectAccount account: Account) {
+    delegate?.accountCoordinator(self, didSelectAccount: account)
   }
 
 }
@@ -39,5 +48,6 @@ public class AccountsCoordinator {
 public protocol AccountsCoordinatorDelegate: class {
 
   func noAccountsForAccountCoordinator(accountsCoordinator: AccountsCoordinator)
+  func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account)
 
 }
