@@ -51,7 +51,7 @@ public class SifterClient: Client {
 
     return promise.future
   }
-  
+
   public func getProjects() -> Future<Project, NoError> {
     return Promise<Project, NoError>().future
   }

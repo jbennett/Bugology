@@ -9,10 +9,10 @@
 import UIKit
 
 public class ProjectsViewController: UITableViewController {
-  
+
   public override func viewDidLoad() {
     super.viewDidLoad()
     title = "Projects"
   }
-  
+
 }

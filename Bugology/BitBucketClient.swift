@@ -18,5 +18,5 @@ public class BitBucketClient: Client {
   public func getProjects() -> Future<Project, NoError> {
     return Promise<Project, NoError>().future
   }
-  
+
 }

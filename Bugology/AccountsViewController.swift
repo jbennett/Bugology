@@ -24,7 +24,7 @@ public class AccountsViewController: UITableViewController {
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
   }
-  
+
   public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let account = dataSource.objectAtIndexPath(indexPath)
     delegate?.accountsViewController(self, didSelectAccount: account)
@@ -37,7 +37,7 @@ public class AccountsViewController: UITableViewController {
 }
 
 public protocol AccountsViewControllerDelegate: class {
-  
+
   func accountsViewController(viewController: AccountsViewController, didSelectAccount account: Account)
-  
+
 }
