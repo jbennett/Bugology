@@ -12,6 +12,6 @@ import BrightFutures
 public protocol Client {
 
   func isAccountValid() -> Future<Bool, NoError>
-  func getProjects() -> Future<Project, NoError>
+  func getProjects() -> Future<[Project], NoError>
 
 }

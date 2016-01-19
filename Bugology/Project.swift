@@ -8,6 +8,8 @@
 
 import Foundation
 
-public struct Project {
+public protocol Project {
 
+  var name: String { get }
+  
 }

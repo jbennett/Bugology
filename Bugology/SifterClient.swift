@@ -52,7 +52,30 @@ public class SifterClient: Client {
     return promise.future
   }
 
-  public func getProjects() -> Future<Project, NoError> {
-    return Promise<Project, NoError>().future
+  public func getProjects() -> Future<[Project], NoError> {
+    let promise = Promise<[Project], NoError>()
+    let url = urlForResource("projects")
+
+    let task = session.dataTaskWithURL(url) { data, response, error in
+      if let _ = error {
+        // todo handle error
+      }
+
+      do {
+        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject],
+          let projectData = json["projects"] as? [[String: AnyObject]] {
+
+            let projects: [Project] = projectData.map { SifterProject(data: $0) }
+            promise.success(projects)
+        } else {
+          // todo handle errors
+        }
+      } catch {
+        // todo handle errors
+      }
+    }
+    task.resume()
+
+    return promise.future
   }
 }

@@ -15,8 +15,8 @@ public class GitHubClient: Client {
     return future(false)
   }
 
-  public func getProjects() -> Future<Project, NoError> {
-    return Promise<Project, NoError>().future
+  public func getProjects() -> Future<[Project], NoError> {
+    return Promise<[Project], NoError>().future
   }
 
 }
