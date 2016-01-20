@@ -11,13 +11,13 @@ import Foundation
 public struct SifterProject: Project {
 
   public let name: String
-  
+
   public init(name: String) {
     self.name = name
   }
-  
+
   public init(data: [String: AnyObject]) {
     self.name = data["name"] as? String ?? ""
   }
-  
+
 }
