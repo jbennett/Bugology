@@ -11,6 +11,8 @@
 		3B219E641C4D558800457A9E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E631C4D558800457A9E /* Project.swift */; };
 		3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E651C4D55B800457A9E /* ProjectsViewController.swift */; };
 		3B219E691C4F590200457A9E /* SifterProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E681C4F590200457A9E /* SifterProject.swift */; };
+		3B219E6B1C4FBD4000457A9E /* PresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */; };
+		3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */; };
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
 		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
@@ -58,6 +60,8 @@
 		3B219E631C4D558800457A9E /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		3B219E651C4D55B800457A9E /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		3B219E681C4F590200457A9E /* SifterProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterProject.swift; sourceTree = "<group>"; };
+		3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationContext.swift; sourceTree = "<group>"; };
+		3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentationContext.swift; sourceTree = "<group>"; };
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				3B57FA7E1C40605000BD4055 /* Data Sources */,
+				3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */,
+				3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 			files = (
 				3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */,
 				3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */,
+				3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */,
 				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
 				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
 				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
@@ -422,6 +429,7 @@
 				3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */,
 				3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */,
 				3B86075D1C419600009D20F4 /* SifterLoginViewController.swift in Sources */,
+				3B219E6B1C4FBD4000457A9E /* PresentationContext.swift in Sources */,
 				3B8607731C44A40A009D20F4 /* BitBucketClient.swift in Sources */,
 				3B57FA701C402D5900BD4055 /* ApplicationCoordinator.swift in Sources */,
 			);

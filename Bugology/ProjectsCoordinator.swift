@@ -10,17 +10,17 @@ import UIKit
 
 public class ProjectsCoordinator {
 
-  let rootViewController: UIViewController
+  let presentationContext: PresentationContext
 
-  public init(rootViewController: UIViewController) {
-    self.rootViewController = rootViewController
+  public init(presentationContext: PresentationContext) {
+    self.presentationContext = presentationContext
   }
 
   public func showProjectsForAccount(account: Account, client: Client) {
     let viewController = ProjectsViewController()
     viewController.account = account
     viewController.client = client
-    rootViewController.showViewController(viewController, sender: nil)
+    presentationContext.showViewController(viewController, sender: nil)
   }
 
 }

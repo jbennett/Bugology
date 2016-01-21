@@ -14,16 +14,16 @@ public class AccountsCoordinator {
   var accountRepository: AccountRepository = UserDefaultsAccountRepository()
 
   var accountsViewController: AccountsViewController?
-  let rootViewController: UIViewController
+  let presentationContext: PresentationContext
 
-  public init(rootViewController: UIViewController) {
-    self.rootViewController = rootViewController
+  public init(presentationContext: PresentationContext) {
+    self.presentationContext = presentationContext
   }
 
   public func showAccounts() {
     accountsViewController = AccountsViewController()
     accountsViewController?.delegate = self
-    rootViewController.showViewController(accountsViewController!, sender: nil)
+    presentationContext.showViewController(accountsViewController!, sender: nil)
 
     accountRepository.getAccounts().onSuccess { accounts in
       if accounts.count == 0 {

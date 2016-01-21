@@ -24,14 +24,14 @@ public class ApplicationCoordinator {
 extension ApplicationCoordinator: AccountsCoordinatorDelegate {
 
   public func showAccountsList() {
-    let accountsCoordinator = AccountsCoordinator(rootViewController: rootViewController)
+    let accountsCoordinator = AccountsCoordinator(presentationContext: rootViewController)
     accountsCoordinator.delegate = self
     accountsCoordinator.showAccounts()
     childCoordinators.addCoordinator(accountsCoordinator)
   }
 
   public func noAccountsForAccountCoordinator(accountsCoordinator: AccountsCoordinator) {
-    let addAccountCoordinator = AddAccountCoordinator(rootViewController: rootViewController)
+    let addAccountCoordinator = AddAccountCoordinator(presentationContext: rootViewController)
     addAccountCoordinator.delegate = self
     addAccountCoordinator.beginAddingAccount(false)
     childCoordinators.addCoordinator(addAccountCoordinator)
@@ -39,7 +39,7 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
 
   public func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account) {
     let client = ClientFactory().clientForAccount(account)
-    let projectsCoordinator = ProjectsCoordinator(rootViewController: rootViewController)
+    let projectsCoordinator = ProjectsCoordinator(presentationContext: rootViewController)
     projectsCoordinator.showProjectsForAccount(account, client: client)
     childCoordinators.addCoordinator(projectsCoordinator)
   }

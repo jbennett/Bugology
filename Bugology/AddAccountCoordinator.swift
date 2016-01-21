@@ -14,11 +14,11 @@ public class AddAccountCoordinator {
   public weak var delegate: AddAccountCoordinatorDelegate?
   var accountRepository: AccountRepository = UserDefaultsAccountRepository()
 
-  let rootViewController: UIViewController
+  let presentationContext: PresentationContext
   var navigationController: UINavigationController?
 
-  public init(rootViewController: UIViewController) {
-    self.rootViewController = rootViewController
+  public init(presentationContext: PresentationContext) {
+    self.presentationContext = presentationContext
   }
 
   public func beginAddingAccount(animated: Bool = true) {
@@ -26,7 +26,7 @@ public class AddAccountCoordinator {
     accountTypeViewController.delegate = self
     navigationController = UINavigationController(rootViewController: accountTypeViewController)
 
-    rootViewController.presentViewController(navigationController!, animated: animated, completion: nil)
+    presentationContext.presentViewController(navigationController!, animated: animated, completion: nil)
   }
 
 }
