@@ -15,6 +15,25 @@ public protocol PresentationContext {
   func showDetailViewController(vc: UIViewController, sender: AnyObject?)
   func presentViewController(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
 
+  func setStyleForService(service: Service?)
+
 }
 
-extension UIViewController: PresentationContext {}
+extension UIViewController: PresentationContext {
+
+  public func setStyleForService(service: Service?) {
+    let navigationController = self as? UINavigationController ?? self.navigationController
+    guard let navigationBar = navigationController?.navigationBar else { return }
+
+    if let service = service {
+      navigationBar.barTintColor = service.primaryServiceColor()
+      navigationBar.titleTextAttributes = [
+        NSForegroundColorAttributeName: service.primaryServiceTextColor()
+      ]
+      navigationBar.tintColor = service.primaryServiceTextColor()
+    } else {
+
+    }
+  }
+
+}

@@ -34,4 +34,9 @@ public class MockPresentationContext: PresentationContext {
     presentedViewControllerCallbacks.append(completion)
   }
 
+  var styles = [Service?]()
+  public func setStyleForService(service: Service?) {
+    styles.append(service)
+  }
+
 }
