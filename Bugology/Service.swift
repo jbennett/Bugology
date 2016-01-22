@@ -25,4 +25,20 @@ public enum Service: String {
     }
   }
 
+  public func primaryServiceColor() -> UIColor {
+    switch self {
+    case .Bitbucket: return UIColor.blueColor()
+    case .Github: return UIColor.grayColor()
+    case .Sifter: return UIColor.orangeColor()
+    }
+  }
+
+  public func primaryServiceTextColor() -> UIColor {
+    switch self {
+    case .Bitbucket: return UIColor.whiteColor()
+    case .Github: return UIColor.whiteColor()
+    case .Sifter: return UIColor.whiteColor()
+    }
+  }
+
 }
