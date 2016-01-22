@@ -64,9 +64,9 @@ public class SifterClient: Client {
       do {
         if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject],
           let projectData = json["projects"] as? [[String: AnyObject]] {
-
-            let projects: [Project] = projectData.map { SifterProject(data: $0) }
-            promise.success(projects)
+            let projects: [Project] = projectData.map({ SifterProject(data: $0) })
+            let sortedProjects = projects.sort({ $0.name < $1.name })
+            promise.success(sortedProjects)
         } else {
           // todo handle errors
         }
