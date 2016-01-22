@@ -114,6 +114,30 @@
 			name = Sifter;
 			sourceTree = "<group>";
 		};
+		3B3B8D8B1C51E6EB003F082C /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA741C40502C00BD4055 /* AccountsViewController.swift */,
+				3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		3B3B8D8C1C51E6F4003F082C /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				3B219E651C4D55B800457A9E /* ProjectsViewController.swift */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		3B3B8D8D1C51E703003F082C /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Issues;
+			sourceTree = "<group>";
+		};
 		3B504AA41C3D860800E89117 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,11 +169,11 @@
 		3B57FA6B1C4022F700BD4055 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B86075B1C4195F1009D20F4 /* Login View Controllers */,
 				3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */,
-				3B57FA741C40502C00BD4055 /* AccountsViewController.swift */,
-				3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */,
-				3B219E651C4D55B800457A9E /* ProjectsViewController.swift */,
+				3B3B8D8B1C51E6EB003F082C /* Accounts */,
+				3B3B8D8D1C51E703003F082C /* Issues */,
+				3B86075B1C4195F1009D20F4 /* Login View Controllers */,
+				3B3B8D8C1C51E6F4003F082C /* Projects */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

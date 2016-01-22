@@ -40,6 +40,7 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
   public func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account) {
     let client = ClientFactory().clientForAccount(account)
     let projectsCoordinator = ProjectsCoordinator(presentationContext: rootViewController)
+    projectsCoordinator.delegate = self
     projectsCoordinator.showProjectsForAccount(account, client: client)
     childCoordinators.addCoordinator(projectsCoordinator)
   }
@@ -51,8 +52,13 @@ extension ApplicationCoordinator: AddAccountCoordinatorDelegate {
 
   public func addAccountCoordinator(addAccountCoordinator: AddAccountCoordinator, didAddAccount account: Account) {
     rootViewController.dismissViewControllerAnimated(true, completion: nil)
+  }
 
-    print("reload accounts")
+}
+
+extension ApplicationCoordinator: ProjectsCoordinatorDelegate {
+
+  public func projectsCoordinator(projectsCoordinator: ProjectsCoordinator, didSelectProject project: Project) {
   }
 
 }

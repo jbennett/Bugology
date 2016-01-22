@@ -10,6 +10,8 @@ import UIKit
 
 public class ProjectsCoordinator {
 
+  public weak var delegate: ProjectsCoordinatorDelegate?
+
   let presentationContext: PresentationContext
 
   public init(presentationContext: PresentationContext) {
@@ -18,9 +20,24 @@ public class ProjectsCoordinator {
 
   public func showProjectsForAccount(account: Account, client: Client) {
     let viewController = ProjectsViewController()
+    viewController.delegate = self
     viewController.account = account
     viewController.client = client
     presentationContext.showViewController(viewController, sender: nil)
   }
+
+}
+
+extension ProjectsCoordinator: ProjectsViewControllerDelegate {
+
+  public func projectsViewController(projectsViewController: ProjectsViewController, didSelectProject project: Project) {
+    delegate?.projectsCoordinator(self, didSelectProject: project)
+  }
+
+}
+
+public protocol ProjectsCoordinatorDelegate: class {
+
+  func projectsCoordinator(projectsCoordinator: ProjectsCoordinator, didSelectProject project: Project)
 
 }
