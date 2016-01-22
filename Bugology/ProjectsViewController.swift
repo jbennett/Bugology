@@ -14,8 +14,8 @@ public class ProjectsViewController: UITableViewController {
 
   public weak var delegate: ProjectsViewControllerDelegate?
 
-  var account: Account?
-  var client: Client?
+  var account: Account!
+  var client: Client!
   var dataSource = SimpleDataSource<Project>(data: [], cellIdentifier: projectCellIdentifier)
 
   public override func viewDidLoad() {
@@ -26,7 +26,7 @@ public class ProjectsViewController: UITableViewController {
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
 
-    client?.getProjects().onSuccess {
+    client.getProjects().onSuccess {
       self.dataSource.data = $0
       self.tableView.reloadData()
     }
@@ -35,12 +35,12 @@ public class ProjectsViewController: UITableViewController {
   private func configureCell(cell: UITableViewCell, project: Project) {
     cell.textLabel?.text = project.name
   }
-  
+
   public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let project = dataSource.objectAtIndexPath(indexPath)
     delegate?.projectsViewController(self, didSelectProject: project)
   }
-  
+
 }
 
 public protocol ProjectsViewControllerDelegate: class {

@@ -31,13 +31,13 @@ public class ProjectsCoordinator {
 extension ProjectsCoordinator: ProjectsViewControllerDelegate {
 
   public func projectsViewController(projectsViewController: ProjectsViewController, didSelectProject project: Project) {
-    delegate?.projectsCoordinator(self, didSelectProject: project)
+    delegate?.projectsCoordinator(self, didSelectProject: project, inAccount: projectsViewController.account)
   }
 
 }
 
 public protocol ProjectsCoordinatorDelegate: class {
 
-  func projectsCoordinator(projectsCoordinator: ProjectsCoordinator, didSelectProject project: Project)
+  func projectsCoordinator(projectsCoordinator: ProjectsCoordinator, didSelectProject project: Project, inAccount account: Account)
 
 }

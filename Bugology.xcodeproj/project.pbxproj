@@ -13,6 +13,8 @@
 		3B219E691C4F590200457A9E /* SifterProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E681C4F590200457A9E /* SifterProject.swift */; };
 		3B219E6B1C4FBD4000457A9E /* PresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */; };
 		3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */; };
+		3B42B1121C51E98900EC99BD /* IssuesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */; };
+		3B42B1141C51EBC300EC99BD /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */; };
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
 		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
@@ -62,6 +64,8 @@
 		3B219E681C4F590200457A9E /* SifterProject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterProject.swift; sourceTree = "<group>"; };
 		3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationContext.swift; sourceTree = "<group>"; };
 		3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentationContext.swift; sourceTree = "<group>"; };
+		3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesCoordinator.swift; sourceTree = "<group>"; };
+		3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		3B3B8D8D1C51E703003F082C /* Issues */ = {
 			isa = PBXGroup;
 			children = (
+				3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */,
 			);
 			name = Issues;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */,
 				3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */,
 				3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */,
+				3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */,
 				3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */,
 			);
 			name = Coordinators;
@@ -447,8 +453,10 @@
 				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
 				3B57FA821C40653300BD4055 /* Service.swift in Sources */,
 				3B219E641C4D558800457A9E /* Project.swift in Sources */,
+				3B42B1121C51E98900EC99BD /* IssuesCoordinator.swift in Sources */,
 				3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */,
 				3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */,
+				3B42B1141C51EBC300EC99BD /* IssuesViewController.swift in Sources */,
 				3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */,
 				3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */,
 				3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */,
