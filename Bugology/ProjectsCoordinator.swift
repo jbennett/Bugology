@@ -23,6 +23,7 @@ public class ProjectsCoordinator {
     viewController.delegate = self
     viewController.account = account
     viewController.client = client
+    presentationContext.setStyleForService(account.serviceType)
     presentationContext.showViewController(viewController, sender: nil)
   }
 

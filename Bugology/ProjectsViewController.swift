@@ -26,15 +26,6 @@ public class ProjectsViewController: UITableViewController {
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
 
-    if let navigationBar = navigationController?.navigationBar {
-      let service = account.serviceType
-      navigationBar.barTintColor = service.primaryServiceColor()
-      navigationBar.titleTextAttributes = [
-        NSForegroundColorAttributeName: service.primaryServiceTextColor()
-      ]
-      navigationBar.tintColor = service.primaryServiceTextColor()
-    }
-
     client.getProjects().onSuccess {
       self.dataSource.data = $0
       self.tableView.reloadData()
