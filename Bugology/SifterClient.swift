@@ -58,13 +58,19 @@ public class SifterClient: Client {
 
     let task = session.dataTaskWithURL(url) { data, response, error in
       if let _ = error {
-        // todo handle error
+        // todo: handle error
       }
 
       do {
         if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject],
           let projectData = json["projects"] as? [[String: AnyObject]] {
-            let projects: [Project] = projectData.map({ SifterProject(data: $0) })
+            let projects: [Project] = projectData.flatMap({
+              do {
+                return try SifterProject(data: $0)
+              } catch {
+                return nil
+              }
+            })
             let sortedProjects = projects.sort({ $0.name < $1.name })
             promise.success(sortedProjects)
         } else {
@@ -72,6 +78,45 @@ public class SifterClient: Client {
         }
       } catch {
         // todo handle errors
+      }
+    }
+    task.resume()
+
+    return promise.future
+  }
+
+  public func getIssuesForProject(project: Project) -> Future<[Issue], NoError> {
+    let promise = Promise<[Issue], NoError>()
+    print(project)
+    guard let project = project as? SifterProject else {
+      // todo: handle this properly
+      return promise.future
+    }
+
+    let url = project.issuesURL
+    print(url)
+    let task = session.dataTaskWithURL(url) { data, response, error in
+      if let _ = error {
+        // todo: handle error
+      }
+
+      do {
+        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? [String:AnyObject],
+          let issueData = json["issues"] as? [[String: AnyObject]] {
+            let issues: [Issue] = issueData.flatMap({
+              do {
+                return try SifterIssue(data: $0)
+              } catch {
+                return nil
+              }
+            })
+
+            promise.success(issues)
+        } else {
+           // todo: handle error
+        }
+      } catch {
+        // todo: handle errors
       }
     }
     task.resume()

@@ -42,6 +42,8 @@
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
+		3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EC1C5416EA00FF9C9D /* Issue.swift */; };
+		3BF872EF1C541C3800FF9C9D /* SifterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -95,6 +97,8 @@
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BDF14A21C3D80A200465FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BDF14A41C3D80A200465FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BF872EC1C5416EA00FF9C9D /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterIssue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		3B219E671C4F58F900457A9E /* Sifter */ = {
 			isa = PBXGroup;
 			children = (
+				3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */,
 				3B219E681C4F590200457A9E /* SifterProject.swift */,
 			);
 			name = Sifter;
@@ -201,8 +206,9 @@
 				3B219E671C4F58F900457A9E /* Sifter */,
 				3B8607651C4492B6009D20F4 /* Account.swift */,
 				3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */,
-				3B57FA811C40653300BD4055 /* Service.swift */,
+				3BF872EC1C5416EA00FF9C9D /* Issue.swift */,
 				3B219E631C4D558800457A9E /* Project.swift */,
+				3B57FA811C40653300BD4055 /* Service.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -436,10 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */,
+				3BF872EF1C541C3800FF9C9D /* SifterIssue.swift in Sources */,
 				3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */,
 				3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */,
 				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
 				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
+				3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */,
 				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
 				3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */,
 				3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */,

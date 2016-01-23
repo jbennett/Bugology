@@ -20,6 +20,7 @@ public class IssuesCoordinator {
 
   public func showIssuesForProject(project: Project, client: Client) {
     let viewController = IssuesViewController()
+    viewController.client = client
     viewController.project = project
 
     presentationContext.showViewController(viewController, sender: self)

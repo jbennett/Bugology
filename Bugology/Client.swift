@@ -13,5 +13,6 @@ public protocol Client {
 
   func isAccountValid() -> Future<Bool, NoError>
   func getProjects() -> Future<[Project], NoError>
+  func getIssuesForProject(project: Project) -> Future<[Issue], NoError>
 
 }

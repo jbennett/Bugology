@@ -8,7 +8,11 @@
 
 import UIKit
 
+let issuesTableViewCell = String(UITableViewCell)
+
 public class IssuesViewController: UITableViewController {
+
+  var client: Client?
 
   public var project: Project? {
     didSet {
@@ -16,8 +20,15 @@ public class IssuesViewController: UITableViewController {
     }
   }
 
+  private let dataSource = SimpleDataSource<Issue>(data: [], cellIdentifier: issuesTableViewCell)
+
   public override func viewDidLoad() {
     super.viewDidLoad()
+
+    tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: projectCellIdentifier)
+    dataSource.tableViewCellConfiguration = self.configureCell
+    dataSource.bindToTableView(tableView)
+
     updateProject()
   }
 
@@ -25,6 +36,16 @@ public class IssuesViewController: UITableViewController {
     guard let project = project else { return }
 
     title = project.name
+
+    client?.getIssuesForProject(project).onSuccess { issues in
+      print(issues)
+      self.dataSource.data = issues
+      self.tableView.reloadData()
+    }
+  }
+
+  func configureCell(cell: UITableViewCell, issue: Issue) {
+    cell.textLabel?.text = issue.name
   }
 
 }
