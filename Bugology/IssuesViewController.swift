@@ -38,7 +38,6 @@ public class IssuesViewController: UITableViewController {
     title = project.name
 
     client?.getIssuesForProject(project).onSuccess { issues in
-      print(issues)
       self.dataSource.data = issues
       self.tableView.reloadData()
     }

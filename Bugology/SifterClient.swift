@@ -87,14 +87,12 @@ public class SifterClient: Client {
 
   public func getIssuesForProject(project: Project) -> Future<[Issue], NoError> {
     let promise = Promise<[Issue], NoError>()
-    print(project)
     guard let project = project as? SifterProject else {
       // todo: handle this properly
       return promise.future
     }
 
     let url = project.issuesURL
-    print(url)
     let task = session.dataTaskWithURL(url) { data, response, error in
       if let _ = error {
         // todo: handle error
