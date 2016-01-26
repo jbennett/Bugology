@@ -11,5 +11,7 @@ import Foundation
 public protocol Issue {
 
   var name: String { get }
+  var category: String? { get }
+  var status: String? { get }
 
 }
