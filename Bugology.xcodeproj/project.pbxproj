@@ -39,6 +39,7 @@
 		3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607751C455911009D20F4 /* AccountRepository.swift */; };
 		3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */; };
 		3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86077A1C4571C9009D20F4 /* Distinct.swift */; };
+		3B9AEAB51C571EE70062A912 /* IssuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB41C571EE70062A912 /* IssuesCell.xib */; };
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
@@ -92,6 +93,7 @@
 		3B8607751C455911009D20F4 /* AccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountRepository.swift; sourceTree = "<group>"; };
 		3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsAccountRepository.swift; sourceTree = "<group>"; };
 		3B86077A1C4571C9009D20F4 /* Distinct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distinct.swift; sourceTree = "<group>"; };
+		3B9AEAB41C571EE70062A912 /* IssuesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssuesCell.xib; sourceTree = "<group>"; };
 		3BDF14951C3D80A200465FA3 /* Bugology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF14981C3D80A200465FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -284,6 +286,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		3B9AEAB31C571ECC0062A912 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B9AEAB41C571EE70062A912 /* IssuesCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		3BDF148C1C3D80A200465FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +322,7 @@
 				3B8607741C455900009D20F4 /* Repositories */,
 				3B86076B1C44A34F009D20F4 /* Services */,
 				3B57FA6B1C4022F700BD4055 /* View Controllers */,
+				3B9AEAB31C571ECC0062A912 /* Views */,
 				3B8607671C449614009D20F4 /* Services */,
 				3B57FA7D1C40604700BD4055 /* Utilities */,
 				3B57FA691C4022D100BD4055 /* Support Files */,
@@ -382,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B86075F1C41F817009D20F4 /* LoginViewControllers.storyboard in Resources */,
+				3B9AEAB51C571EE70062A912 /* IssuesCell.xib in Resources */,
 				3B8607611C41FABF009D20F4 /* Services.xcassets in Resources */,
 				3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */,
 				3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */,
