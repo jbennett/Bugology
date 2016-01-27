@@ -21,12 +21,13 @@ public class AddAccountCoordinator {
     self.presentationContext = presentationContext
   }
 
-  public func beginAddingAccount(animated: Bool = true) {
+  public func beginAddingAccount(cancellable: Bool = true) {
     let accountTypeViewController = AddAccountTypeViewController()
     accountTypeViewController.delegate = self
+    accountTypeViewController.cancellable = true
     navigationController = UINavigationController(rootViewController: accountTypeViewController)
 
-    presentationContext.presentViewController(navigationController!, animated: animated, completion: nil)
+    presentationContext.presentViewController(navigationController!, animated: cancellable, completion: nil)
   }
 
 }
@@ -34,6 +35,7 @@ public class AddAccountCoordinator {
 public protocol AddAccountCoordinatorDelegate: class {
 
   func addAccountCoordinator(addAccountCoordinator: AddAccountCoordinator, didAddAccount account: Account)
+  func didCancelAddAccount(addAccountCoordinator: AddAccountCoordinator)
 
 }
 
@@ -43,6 +45,10 @@ extension AddAccountCoordinator: AddAccountTypeViewControllerDelegate {
     let viewController = service.loginViewController()
     viewController.delegate = self
     navigationController?.showViewController(viewController, sender: nil)
+  }
+
+  public func didTapCancelOnAccountTypeViewController(viewController: AddAccountTypeViewController) {
+    delegate?.didCancelAddAccount(self)
   }
 
 }

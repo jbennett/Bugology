@@ -42,6 +42,10 @@ extension AccountsCoordinator: AccountsViewControllerDelegate {
     delegate?.accountCoordinator(self, didSelectAccount: account)
   }
 
+  public func didTapAddAccountOnAccountsViewController(viewController: AccountsViewController) {
+    delegate?.didTapAddAccountOnAccountsCoordinator(self)
+  }
+
 }
 
 
@@ -49,5 +53,6 @@ public protocol AccountsCoordinatorDelegate: class {
 
   func noAccountsForAccountCoordinator(accountsCoordinator: AccountsCoordinator)
   func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account)
+  func didTapAddAccountOnAccountsCoordinator(accountsCoordinator: AccountsCoordinator)
 
 }

@@ -31,10 +31,7 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
   }
 
   public func noAccountsForAccountCoordinator(accountsCoordinator: AccountsCoordinator) {
-    let addAccountCoordinator = AddAccountCoordinator(presentationContext: rootViewController)
-    addAccountCoordinator.delegate = self
-    addAccountCoordinator.beginAddingAccount(false)
-    childCoordinators.addCoordinator(addAccountCoordinator)
+    showAddAccounts(false)
   }
 
   public func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account) {
@@ -45,12 +42,27 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
     childCoordinators.addCoordinator(projectsCoordinator)
   }
 
+  public func didTapAddAccountOnAccountsCoordinator(accountsCoordinator: AccountsCoordinator) {
+    showAddAccounts()
+  }
+
 }
 
 // Mark: Add Account Coordinator
 extension ApplicationCoordinator: AddAccountCoordinatorDelegate {
 
+  public func showAddAccounts(cancellable: Bool = true) {
+    let addAccountCoordinator = AddAccountCoordinator(presentationContext: rootViewController)
+    addAccountCoordinator.delegate = self
+    addAccountCoordinator.beginAddingAccount(cancellable)
+    childCoordinators.addCoordinator(addAccountCoordinator)
+  }
+
   public func addAccountCoordinator(addAccountCoordinator: AddAccountCoordinator, didAddAccount account: Account) {
+    rootViewController.dismissViewControllerAnimated(true, completion: nil)
+  }
+
+  public func didCancelAddAccount(addAccountCoordinator: AddAccountCoordinator) {
     rootViewController.dismissViewControllerAnimated(true, completion: nil)
   }
 

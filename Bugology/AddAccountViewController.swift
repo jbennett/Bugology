@@ -11,6 +11,9 @@ import UIKit
 public class AddAccountTypeViewController: UITableViewController {
 
   public weak var delegate: AddAccountTypeViewControllerDelegate?
+  public var cancellable: Bool = true {
+    didSet { updateNavButtons() }
+  }
 
   let dataSource = SimpleDataSource<Service>(data: Service.allServices(), cellIdentifier: "Basic Cell")
 
@@ -21,6 +24,19 @@ public class AddAccountTypeViewController: UITableViewController {
     dataSource.tableViewCellConfiguration = self.configureCell
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Basic Cell")
     dataSource.bindToTableView(tableView)
+  }
+
+  lazy var cancelButton: UIBarButtonItem = { UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "didTapCancel") }()
+  func updateNavButtons() {
+    if cancellable {
+      navigationItem.leftBarButtonItem = cancelButton
+    } else {
+      navigationItem.leftBarButtonItem = nil
+    }
+  }
+
+  @IBAction private func didTapCancel() {
+    delegate?.didTapCancelOnAccountTypeViewController(self)
   }
 
   func configureCell(cell: UITableViewCell, service: Service) {
@@ -37,5 +53,6 @@ public class AddAccountTypeViewController: UITableViewController {
 public protocol AddAccountTypeViewControllerDelegate: class {
 
   func addAccountTypeViewController(addAccountTypeViewController: AddAccountTypeViewController, didSelectService service: Service)
+  func didTapCancelOnAccountTypeViewController(viewController: AddAccountTypeViewController)
 
 }

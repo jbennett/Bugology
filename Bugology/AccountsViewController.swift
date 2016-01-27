@@ -19,7 +19,7 @@ public class AccountsViewController: UITableViewController {
     super.viewDidLoad()
 
     title = "Accounts"
-    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "didTapAdd")
     tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: accountCellIdentifier)
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
@@ -28,6 +28,10 @@ public class AccountsViewController: UITableViewController {
   public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let account = dataSource.objectAtIndexPath(indexPath)
     delegate?.accountsViewController(self, didSelectAccount: account)
+  }
+
+  @IBAction private func didTapAdd() {
+    delegate?.didTapAddAccountOnAccountsViewController(self)
   }
 
   private func configureCell(cell: UITableViewCell, account: Account) {
@@ -39,5 +43,6 @@ public class AccountsViewController: UITableViewController {
 public protocol AccountsViewControllerDelegate: class {
 
   func accountsViewController(viewController: AccountsViewController, didSelectAccount account: Account)
+  func didTapAddAccountOnAccountsViewController(viewController: AccountsViewController)
 
 }
