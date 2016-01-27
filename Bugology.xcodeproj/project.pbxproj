@@ -26,6 +26,7 @@
 		3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */; };
 		3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */; };
 		3B57FA821C40653300BD4055 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA811C40653300BD4055 /* Service.swift */; };
+		3B6959951C59E19100926115 /* OpenAddAccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */; };
 		3B86075D1C419600009D20F4 /* SifterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86075C1C419600009D20F4 /* SifterLoginViewController.swift */; };
 		3B86075F1C41F817009D20F4 /* LoginViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B86075E1C41F817009D20F4 /* LoginViewControllers.storyboard */; };
 		3B8607611C41FABF009D20F4 /* Services.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8607601C41FABF009D20F4 /* Services.xcassets */; };
@@ -40,6 +41,8 @@
 		3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */; };
 		3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86077A1C4571C9009D20F4 /* Distinct.swift */; };
 		3B9AEAB51C571EE70062A912 /* IssuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB41C571EE70062A912 /* IssuesCell.xib */; };
+		3B9AEAB81C5883BE0062A912 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB71C5883BE0062A912 /* Message.swift */; };
+		3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB91C5883F00062A912 /* MessageHandler.swift */; };
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
@@ -80,6 +83,7 @@
 		3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
 		3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDataSource.swift; sourceTree = "<group>"; };
 		3B57FA811C40653300BD4055 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAddAccountMessage.swift; sourceTree = "<group>"; };
 		3B86075C1C419600009D20F4 /* SifterLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterLoginViewController.swift; sourceTree = "<group>"; };
 		3B86075E1C41F817009D20F4 /* LoginViewControllers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewControllers.storyboard; sourceTree = "<group>"; };
 		3B8607601C41FABF009D20F4 /* Services.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Services.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 		3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsAccountRepository.swift; sourceTree = "<group>"; };
 		3B86077A1C4571C9009D20F4 /* Distinct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distinct.swift; sourceTree = "<group>"; };
 		3B9AEAB41C571EE70062A912 /* IssuesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssuesCell.xib; sourceTree = "<group>"; };
+		3B9AEAB71C5883BE0062A912 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3B9AEAB91C5883F00062A912 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
 		3BDF14951C3D80A200465FA3 /* Bugology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF14981C3D80A200465FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -294,6 +300,16 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		3B9AEAB61C5883AA0062A912 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				3B9AEAB71C5883BE0062A912 /* Message.swift */,
+				3B9AEAB91C5883F00062A912 /* MessageHandler.swift */,
+				3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		3BDF148C1C3D80A200465FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +332,7 @@
 			children = (
 				3B57FA6A1C4022DF00BD4055 /* Assets */,
 				3B8607791C4571BC009D20F4 /* Categories */,
+				3B9AEAB61C5883AA0062A912 /* Events */,
 				3B57FA6E1C402D4C00BD4055 /* Coordinators */,
 				3B8607681C44A2D7009D20F4 /* Factories */,
 				3B57FA761C4050B300BD4055 /* Models */,
@@ -460,7 +477,9 @@
 				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
 				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
 				3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */,
+				3B9AEAB81C5883BE0062A912 /* Message.swift in Sources */,
 				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
+				3B6959951C59E19100926115 /* OpenAddAccountMessage.swift in Sources */,
 				3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */,
 				3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */,
 				3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */,
@@ -469,6 +488,7 @@
 				3B219E691C4F590200457A9E /* SifterProject.swift in Sources */,
 				3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */,
 				3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */,
+				3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */,
 				3B86076D1C44A360009D20F4 /* Client.swift in Sources */,
 				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
 				3B57FA821C40653300BD4055 /* Service.swift in Sources */,

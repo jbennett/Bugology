@@ -12,6 +12,7 @@ let accountCellIdentifier = "Account Cell";
 
 public class AccountsViewController: UITableViewController {
 
+  public weak var messageHandler: MessageHandler?
   public weak var delegate: AccountsViewControllerDelegate?
   var dataSource = SimpleDataSource<Account>(data: [], cellIdentifier: accountCellIdentifier)
 
@@ -31,7 +32,7 @@ public class AccountsViewController: UITableViewController {
   }
 
   @IBAction private func didTapAdd() {
-    delegate?.didTapAddAccountOnAccountsViewController(self)
+    messageHandler?.handleMessage(OpenAddAccountMessage())
   }
 
   private func configureCell(cell: UITableViewCell, account: Account) {
@@ -43,6 +44,5 @@ public class AccountsViewController: UITableViewController {
 public protocol AccountsViewControllerDelegate: class {
 
   func accountsViewController(viewController: AccountsViewController, didSelectAccount account: Account)
-  func didTapAddAccountOnAccountsViewController(viewController: AccountsViewController)
 
 }

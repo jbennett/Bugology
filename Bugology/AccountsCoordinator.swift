@@ -10,6 +10,7 @@ import UIKit
 
 public class AccountsCoordinator {
 
+  public weak var messageHandler: MessageHandler?
   public weak var delegate: AccountsCoordinatorDelegate?
   var accountRepository: AccountRepository = UserDefaultsAccountRepository()
 
@@ -23,6 +24,7 @@ public class AccountsCoordinator {
   public func showAccounts() {
     accountsViewController = AccountsViewController()
     accountsViewController?.delegate = self
+    accountsViewController?.messageHandler = messageHandler
     presentationContext.showViewController(accountsViewController!, sender: nil)
 
     accountRepository.getAccounts().onSuccess { accounts in
@@ -42,10 +44,6 @@ extension AccountsCoordinator: AccountsViewControllerDelegate {
     delegate?.accountCoordinator(self, didSelectAccount: account)
   }
 
-  public func didTapAddAccountOnAccountsViewController(viewController: AccountsViewController) {
-    delegate?.didTapAddAccountOnAccountsCoordinator(self)
-  }
-
 }
 
 
@@ -53,6 +51,5 @@ public protocol AccountsCoordinatorDelegate: class {
 
   func noAccountsForAccountCoordinator(accountsCoordinator: AccountsCoordinator)
   func accountCoordinator(accountCoordinator: AccountsCoordinator, didSelectAccount account: Account)
-  func didTapAddAccountOnAccountsCoordinator(accountsCoordinator: AccountsCoordinator)
 
 }

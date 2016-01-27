@@ -13,9 +13,22 @@ public class ApplicationCoordinator {
 //  let applicationViewController = ApplicationViewController()
   let rootViewController = UINavigationController()
   let childCoordinators = CoordinatorsCollection()
+  public let nextHandler: MessageHandler? = nil
 
   public func installIntoWindow(window: UIWindow) {
       window.rootViewController = rootViewController
+  }
+
+}
+
+extension ApplicationCoordinator: MessageHandler {
+
+  public func handleMessage(message: Message) {
+    switch message {
+    case is OpenAddAccountMessage: showAddAccounts()
+    default:
+      nextHandler?.handleMessage(message)
+    }
   }
 
 }
@@ -25,6 +38,7 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
 
   public func showAccountsList() {
     let accountsCoordinator = AccountsCoordinator(presentationContext: rootViewController)
+    accountsCoordinator.messageHandler = self
     accountsCoordinator.delegate = self
     accountsCoordinator.showAccounts()
     childCoordinators.addCoordinator(accountsCoordinator)
@@ -40,10 +54,6 @@ extension ApplicationCoordinator: AccountsCoordinatorDelegate {
     projectsCoordinator.delegate = self
     projectsCoordinator.showProjectsForAccount(account, client: client)
     childCoordinators.addCoordinator(projectsCoordinator)
-  }
-
-  public func didTapAddAccountOnAccountsCoordinator(accountsCoordinator: AccountsCoordinator) {
-    showAddAccounts()
   }
 
 }
