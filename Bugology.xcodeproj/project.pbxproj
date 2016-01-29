@@ -15,6 +15,7 @@
 		3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */; };
 		3B42B1121C51E98900EC99BD /* IssuesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */; };
 		3B42B1141C51EBC300EC99BD /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */; };
+		3B4CC05E1C5CD55200201B52 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */; };
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
 		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
@@ -73,6 +74,7 @@
 		3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPresentationContext.swift; sourceTree = "<group>"; };
 		3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesCoordinator.swift; sourceTree = "<group>"; };
 		3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
+		3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 				3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */,
 			);
 			name = Issues;
+			sourceTree = "<group>";
+		};
+		3B4CC05C1C5CD51800201B52 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */,
+			);
+			name = Operations;
 			sourceTree = "<group>";
 		};
 		3B504AA41C3D860800E89117 /* Frameworks */ = {
@@ -339,6 +349,7 @@
 				3B57FA6E1C402D4C00BD4055 /* Coordinators */,
 				3B8607681C44A2D7009D20F4 /* Factories */,
 				3B57FA761C4050B300BD4055 /* Models */,
+				3B4CC05C1C5CD51800201B52 /* Operations */,
 				3B8607741C455900009D20F4 /* Repositories */,
 				3B86076B1C44A34F009D20F4 /* Services */,
 				3B57FA6B1C4022F700BD4055 /* View Controllers */,
@@ -489,6 +500,7 @@
 				3B86076A1C44A2EA009D20F4 /* ClientFactory.swift in Sources */,
 				3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */,
 				3B219E691C4F590200457A9E /* SifterProject.swift in Sources */,
+				3B4CC05E1C5CD55200201B52 /* NetworkOperation.swift in Sources */,
 				3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */,
 				3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */,
 				3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */,
