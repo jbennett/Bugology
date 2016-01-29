@@ -13,6 +13,7 @@ let issuesTableViewCell = String(UITableViewCell)
 public class IssuesViewController: UITableViewController {
 
   var client: Client?
+  weak var delegate: IssuesViewControllerDelegate?
 
   public var project: Project? {
     didSet {
@@ -47,5 +48,16 @@ public class IssuesViewController: UITableViewController {
     cell.textLabel?.text = issue.name
     cell.detailTextLabel?.text = issue.status
   }
+
+  public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let issue = dataSource.objectAtIndexPath(indexPath)
+    delegate?.issuesViewController(self, didSelectIssue: issue)
+  }
+
+}
+
+public protocol IssuesViewControllerDelegate: class {
+
+  func issuesViewController(viewController: IssuesViewController, didSelectIssue issue: Issue)
 
 }

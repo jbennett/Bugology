@@ -91,4 +91,10 @@ extension ApplicationCoordinator: ProjectsCoordinatorDelegate {
 
 extension ApplicationCoordinator: IssuesCoordinatorDelegate {
 
+  public func issuesCoordinator(issuesCoordinator: IssuesCoordinator, didSelectIssue issue: Issue) {
+    let issueCoordinator = IssueCoordinator(presentationContext: rootViewController)
+    issueCoordinator.showIssue(issue)
+    childCoordinators.addCoordinator(issueCoordinator)
+  }
+
 }

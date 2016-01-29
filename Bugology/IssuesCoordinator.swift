@@ -20,6 +20,7 @@ public class IssuesCoordinator {
 
   public func showIssuesForProject(project: Project, client: Client) {
     let viewController = IssuesViewController()
+    viewController.delegate = self
     viewController.client = client
     viewController.project = project
 
@@ -28,5 +29,16 @@ public class IssuesCoordinator {
 
 }
 
+extension IssuesCoordinator: IssuesViewControllerDelegate {
+
+  public func issuesViewController(viewController: IssuesViewController, didSelectIssue issue: Issue) {
+    delegate?.issuesCoordinator(self, didSelectIssue: issue)
+  }
+
+}
+
 public protocol IssuesCoordinatorDelegate: class {
+
+  func issuesCoordinator(issuesCoordinator: IssuesCoordinator, didSelectIssue issue: Issue)
+
 }

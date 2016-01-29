@@ -46,6 +46,7 @@
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
+		3BDFB0281C5B16E20005ADE1 /* IssueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFB0271C5B16E20005ADE1 /* IssueCoordinator.swift */; };
 		3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EC1C5416EA00FF9C9D /* Issue.swift */; };
 		3BF872EF1C541C3800FF9C9D /* SifterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BDF14A21C3D80A200465FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BDF14A41C3D80A200465FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDFB0271C5B16E20005ADE1 /* IssueCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueCoordinator.swift; sourceTree = "<group>"; };
 		3BF872EC1C5416EA00FF9C9D /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterIssue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +204,7 @@
 				3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */,
 				3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */,
 				3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */,
+				3BDFB0271C5B16E20005ADE1 /* IssueCoordinator.swift */,
 				3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */,
 				3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */,
 			);
@@ -490,6 +493,7 @@
 				3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */,
 				3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */,
 				3B86076D1C44A360009D20F4 /* Client.swift in Sources */,
+				3BDFB0281C5B16E20005ADE1 /* IssueCoordinator.swift in Sources */,
 				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
 				3B57FA821C40653300BD4055 /* Service.swift in Sources */,
 				3B219E641C4D558800457A9E /* Project.swift in Sources */,
