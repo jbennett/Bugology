@@ -44,7 +44,7 @@ public class NetworkOperation: NSOperation {
     sessionTask = localURLSession.dataTaskWithRequest(request)
     sessionTask!.resume()
   }
-  
+
   func processData() {
     // implement in subclass
   }
@@ -53,34 +53,37 @@ public class NetworkOperation: NSOperation {
 
 extension NetworkOperation: NSURLSessionDelegate, NSURLSessionDataDelegate {
 
-  public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveResponse response: NSURLResponse, completionHandler: (NSURLSessionResponseDisposition) -> Void) {
+  public func URLSession(session: NSURLSession,
+              dataTask: NSURLSessionDataTask,
+              didReceiveResponse response: NSURLResponse,
+                                 completionHandler: (NSURLSessionResponseDisposition) -> Void) {
     guard !cancelled else {
       finished = true
       sessionTask?.cancel()
       return
     }
-    
+
     // TODO: handle error codes etc
     completionHandler(.Allow)
   }
-  
+
   public func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
     guard !cancelled else {
       finished = true
       sessionTask?.cancel()
       return
     }
-    
+
     incomingData.appendData(data)
   }
-  
+
   public func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
     guard !cancelled else {
       finished = true
       sessionTask?.cancel()
       return
     }
-    
+
     if let error = error {
       print("failed to receive response: \(error)")
       finished = true
@@ -89,7 +92,5 @@ extension NetworkOperation: NSURLSessionDelegate, NSURLSessionDataDelegate {
       finished = true
     }
   }
-  
-  
 
 }
