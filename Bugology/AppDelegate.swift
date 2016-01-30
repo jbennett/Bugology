@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -10,6 +10,8 @@ import Foundation
 
 public class ClientFactory {
 
+  public init() {}
+
   public func clientForAccount(account: Account) -> Client {
     switch account.serviceType {
     case .Bitbucket: return BitBucketClient()

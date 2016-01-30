@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugKit
 
 public class IssueCoordinator {
 

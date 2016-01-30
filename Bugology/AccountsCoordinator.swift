@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BugKit
+import BugUIKit
 
 public class AccountsCoordinator {
 
@@ -45,7 +47,6 @@ extension AccountsCoordinator: AccountsViewControllerDelegate {
   }
 
 }
-
 
 public protocol AccountsCoordinatorDelegate: class {
 

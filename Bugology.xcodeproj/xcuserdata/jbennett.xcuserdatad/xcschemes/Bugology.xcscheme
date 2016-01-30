@@ -11,7 +11,8 @@
             buildForRunning = "YES"
             buildForProfiling = "YES"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "YES"
+            hideIssues = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3BDF14941C3D80A200465FA3"
@@ -75,6 +76,36 @@
                BlueprintIdentifier = "3B504A8F1C3D85B700E89117"
                BuildableName = "BugCoreTests.xctest"
                BlueprintName = "BugCoreTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B4CC06C1C5D34A900201B52"
+               BuildableName = "BugKitTests.xctest"
+               BlueprintName = "BugKitTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3B4CC0AC1C5D38D000201B52"
+               BuildableName = "BugUIKitTests.xctest"
+               BlueprintName = "BugUIKitTests"
+               ReferencedContainer = "container:Bugology.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3BDB8C701C5D486F003D5BAC"
+               BuildableName = "SRCoreTests.xctest"
+               BlueprintName = "SRCoreTests"
                ReferencedContainer = "container:Bugology.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import BugKit
+import SRCore
 
 let issuesTableViewCell = String(UITableViewCell)
 
 public class IssuesViewController: UITableViewController {
 
-  var client: Client?
-  weak var delegate: IssuesViewControllerDelegate?
+  public var client: Client?
+  public weak var delegate: IssuesViewControllerDelegate?
 
   public var project: Project? {
     didSet {
@@ -26,7 +28,8 @@ public class IssuesViewController: UITableViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.registerNib(UINib(nibName: "IssuesCell", bundle: nil), forCellReuseIdentifier: projectCellIdentifier)
+    let bundle = NSBundle(forClass: IssuesViewController.self)
+    tableView.registerNib(UINib(nibName: "IssuesCell", bundle: bundle), forCellReuseIdentifier: projectCellIdentifier)
     dataSource.tableViewCellConfiguration = self.configureCell
     dataSource.bindToTableView(tableView)
 

@@ -4,20 +4,65 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BugKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>BugUIKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Bugology.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SRCore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3B4CC0631C5D34A800201B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B4CC06C1C5D34A900201B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B4CC0A31C5D38D000201B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3B4CC0AC1C5D38D000201B52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B504A861C3D85B700E89117</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>3B504A8F1C3D85B700E89117</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BDB8C671C5D486F003D5BAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BDB8C701C5D486F003D5BAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

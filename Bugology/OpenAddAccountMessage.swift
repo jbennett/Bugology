@@ -10,4 +10,6 @@ import Foundation
 
 public struct OpenAddAccountMessage: Message {
 
+  public init() {}
+
 }

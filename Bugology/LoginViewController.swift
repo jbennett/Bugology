@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugKit
 
 public class LoginViewController: UIViewController {
 
@@ -31,3 +32,13 @@ public protocol LoginViewControllerDelegate: class {
 //  func authRequestForSifterLoginViewController(loginViewController: SifterLoginViewController)
 //
 //}
+
+extension Service {
+    public func loginViewController() -> LoginViewController {
+      switch self {
+      case .Bitbucket: return LoginViewController()
+      case .Github: return LoginViewController()
+      case .Sifter: return SifterLoginViewController.fromStoryboard()
+      }
+    }
+}

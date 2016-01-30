@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BugKit
+import SRCore
 
 let projectCellIdentifier = String(UITableViewCell)
 
@@ -14,8 +16,8 @@ public class ProjectsViewController: UITableViewController {
 
   public weak var delegate: ProjectsViewControllerDelegate?
 
-  var account: Account!
-  var client: Client!
+  public var account: Account!
+  public var client: Client!
   var dataSource = SimpleDataSource<Project>(data: [], cellIdentifier: projectCellIdentifier)
 
   public override func viewDidLoad() {

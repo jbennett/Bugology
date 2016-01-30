@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SRCore
+import BugKit
 
 public class AddAccountTypeViewController: UITableViewController {
 

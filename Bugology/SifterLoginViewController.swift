@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugKit
 
 // todo: update token field from pasteboard
 
@@ -22,7 +23,8 @@ public class SifterLoginViewController: LoginViewController {
   }
 
   public override class func fromStoryboard() -> SifterLoginViewController {
-    let storyboard = UIStoryboard(name: "LoginViewControllers", bundle: nil)
+    let bundle = NSBundle(forClass: SifterLoginViewController.self)
+    let storyboard = UIStoryboard(name: "LoginViewControllers", bundle: bundle)
     guard let viewController = storyboard.instantiateViewControllerWithIdentifier("SifterLoginViewController") as? SifterLoginViewController else {
       abort()
     }

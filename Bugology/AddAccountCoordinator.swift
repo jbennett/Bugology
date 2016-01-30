@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BugKit
+import BugUIKit
 import SafariServices
 
 public class AddAccountCoordinator {

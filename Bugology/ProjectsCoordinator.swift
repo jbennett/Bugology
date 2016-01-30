@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BugKit
+import BugUIKit
 
 public class ProjectsCoordinator {
 

@@ -12,6 +12,8 @@ public class CoordinatorsCollection {
 
   var coordinators = [AnyObject]()
 
+  public init() {}
+
   public func addCoordinator(coordinator: AnyObject) {
     coordinators.append(coordinator)
   }

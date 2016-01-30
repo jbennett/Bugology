@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BugKit
+import SRCore
 
 let accountCellIdentifier = "Account Cell";
 
@@ -14,7 +16,7 @@ public class AccountsViewController: UITableViewController {
 
   public weak var messageHandler: MessageHandler?
   public weak var delegate: AccountsViewControllerDelegate?
-  var dataSource = SimpleDataSource<Account>(data: [], cellIdentifier: accountCellIdentifier)
+  public var dataSource = SimpleDataSource<Account>(data: [], cellIdentifier: accountCellIdentifier)
 
   public override func viewDidLoad() {
     super.viewDidLoad()

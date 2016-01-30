@@ -7,50 +7,143 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */; };
-		3B219E641C4D558800457A9E /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E631C4D558800457A9E /* Project.swift */; };
-		3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E651C4D55B800457A9E /* ProjectsViewController.swift */; };
-		3B219E691C4F590200457A9E /* SifterProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E681C4F590200457A9E /* SifterProject.swift */; };
-		3B219E6B1C4FBD4000457A9E /* PresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */; };
-		3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */; };
-		3B42B1121C51E98900EC99BD /* IssuesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */; };
-		3B42B1141C51EBC300EC99BD /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */; };
-		3B4CC05E1C5CD55200201B52 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */; };
+		3B065BFE1C5D56E5005E4522 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */; };
+		3B065BFF1C5D56E5005E4522 /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */; };
+		3B065C001C5D56E5005E4522 /* AddAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */; };
+		3B065C011C5D56E5005E4522 /* IssueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFB0271C5B16E20005ADE1 /* IssueCoordinator.swift */; };
+		3B065C021C5D56E5005E4522 /* IssuesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */; };
+		3B065C031C5D56E5005E4522 /* ProjectsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E611C4D547300457A9E /* ProjectsCoordinator.swift */; };
+		3B065C041C5D597F005E4522 /* Services.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8607601C41FABF009D20F4 /* Services.xcassets */; };
+		3B4CC0671C5D34A900201B52 /* BugKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4CC0661C5D34A900201B52 /* BugKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4CC06E1C5D34A900201B52 /* BugKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0641C5D34A800201B52 /* BugKit.framework */; };
+		3B4CC0751C5D34A900201B52 /* BugKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0741C5D34A900201B52 /* BugKitTests.swift */; };
+		3B4CC0791C5D34A900201B52 /* BugKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0641C5D34A800201B52 /* BugKit.framework */; };
+		3B4CC07A1C5D34A900201B52 /* BugKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0641C5D34A800201B52 /* BugKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B4CC0821C5D34BE00201B52 /* PresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */; };
+		3B4CC0831C5D34BE00201B52 /* MockPresentationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */; };
+		3B4CC0841C5D34DA00201B52 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86076C1C44A360009D20F4 /* Client.swift */; };
+		3B4CC0851C5D34DA00201B52 /* BitBucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607721C44A40A009D20F4 /* BitBucketClient.swift */; };
+		3B4CC0861C5D34DA00201B52 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607701C44A3F0009D20F4 /* GitHubClient.swift */; };
+		3B4CC0871C5D34DA00201B52 /* SifterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86076E1C44A36E009D20F4 /* SifterClient.swift */; };
+		3B4CC0881C5D34F200201B52 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607751C455911009D20F4 /* AccountRepository.swift */; };
+		3B4CC0891C5D34F200201B52 /* UserDefaultsAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */; };
+		3B4CC08A1C5D34F900201B52 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */; };
+		3B4CC08B1C5D350500201B52 /* SifterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */; };
+		3B4CC08C1C5D350500201B52 /* SifterProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E681C4F590200457A9E /* SifterProject.swift */; };
+		3B4CC08D1C5D350500201B52 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607651C4492B6009D20F4 /* Account.swift */; };
+		3B4CC08E1C5D350500201B52 /* CoordinatorsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */; };
+		3B4CC08F1C5D350500201B52 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EC1C5416EA00FF9C9D /* Issue.swift */; };
+		3B4CC0901C5D350500201B52 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E631C4D558800457A9E /* Project.swift */; };
+		3B4CC0911C5D350500201B52 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA811C40653300BD4055 /* Service.swift */; };
+		3B4CC0921C5D350F00201B52 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607691C44A2EA009D20F4 /* ClientFactory.swift */; };
+		3B4CC0991C5D35D100201B52 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB71C5883BE0062A912 /* Message.swift */; };
+		3B4CC09A1C5D35D100201B52 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB91C5883F00062A912 /* MessageHandler.swift */; };
+		3B4CC09B1C5D35D100201B52 /* OpenAddAccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */; };
+		3B4CC09C1C5D35DA00201B52 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86077A1C4571C9009D20F4 /* Distinct.swift */; };
+		3B4CC09D1C5D35FB00201B52 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
+		3B4CC09E1C5D35FB00201B52 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
+		3B4CC0A71C5D38D000201B52 /* BugUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B4CC0A61C5D38D000201B52 /* BugUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B4CC0AE1C5D38D000201B52 /* BugUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */; };
+		3B4CC0B51C5D38D000201B52 /* BugUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0B41C5D38D000201B52 /* BugUIKitTests.swift */; };
+		3B4CC0B91C5D38D000201B52 /* BugUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */; };
+		3B4CC0BA1C5D38D000201B52 /* BugUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B4CC0C11C5D38EF00201B52 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
+		3B4CC0C21C5D38EF00201B52 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA741C40502C00BD4055 /* AccountsViewController.swift */; };
+		3B4CC0C31C5D38EF00201B52 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */; };
+		3B4CC0C41C5D38EF00201B52 /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */; };
+		3B4CC0C51C5D38EF00201B52 /* LoginViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B86075E1C41F817009D20F4 /* LoginViewControllers.storyboard */; };
+		3B4CC0C61C5D38EF00201B52 /* SifterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86075C1C419600009D20F4 /* SifterLoginViewController.swift */; };
+		3B4CC0C71C5D38EF00201B52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607621C42C425009D20F4 /* LoginViewController.swift */; };
+		3B4CC0C81C5D38EF00201B52 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B219E651C4D55B800457A9E /* ProjectsViewController.swift */; };
+		3B4CC0C91C5D38EF00201B52 /* IssuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB41C571EE70062A912 /* IssuesCell.xib */; };
+		3B4CC0CB1C5D397300201B52 /* BugKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4CC0641C5D34A800201B52 /* BugKit.framework */; };
 		3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
 		3B504AA81C3D861300E89117 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
-		3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */; };
-		3B57FA701C402D5900BD4055 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA6F1C402D5900BD4055 /* ApplicationCoordinator.swift */; };
-		3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA711C40452500BD4055 /* AccountsCoordinator.swift */; };
-		3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA741C40502C00BD4055 /* AccountsViewController.swift */; };
-		3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA771C4050C300BD4055 /* CoordinatorsCollection.swift */; };
-		3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA791C40593700BD4055 /* AddAccountCoordinator.swift */; };
-		3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7B1C405CAF00BD4055 /* AddAccountViewController.swift */; };
-		3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */; };
-		3B57FA821C40653300BD4055 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA811C40653300BD4055 /* Service.swift */; };
-		3B6959951C59E19100926115 /* OpenAddAccountMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */; };
-		3B86075D1C419600009D20F4 /* SifterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86075C1C419600009D20F4 /* SifterLoginViewController.swift */; };
-		3B86075F1C41F817009D20F4 /* LoginViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B86075E1C41F817009D20F4 /* LoginViewControllers.storyboard */; };
-		3B8607611C41FABF009D20F4 /* Services.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8607601C41FABF009D20F4 /* Services.xcassets */; };
-		3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607621C42C425009D20F4 /* LoginViewController.swift */; };
-		3B8607661C4492B6009D20F4 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607651C4492B6009D20F4 /* Account.swift */; };
-		3B86076A1C44A2EA009D20F4 /* ClientFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607691C44A2EA009D20F4 /* ClientFactory.swift */; };
-		3B86076D1C44A360009D20F4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86076C1C44A360009D20F4 /* Client.swift */; };
-		3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86076E1C44A36E009D20F4 /* SifterClient.swift */; };
-		3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607701C44A3F0009D20F4 /* GitHubClient.swift */; };
-		3B8607731C44A40A009D20F4 /* BitBucketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607721C44A40A009D20F4 /* BitBucketClient.swift */; };
-		3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607751C455911009D20F4 /* AccountRepository.swift */; };
-		3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */; };
-		3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B86077A1C4571C9009D20F4 /* Distinct.swift */; };
-		3B9AEAB51C571EE70062A912 /* IssuesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB41C571EE70062A912 /* IssuesCell.xib */; };
-		3B9AEAB81C5883BE0062A912 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB71C5883BE0062A912 /* Message.swift */; };
-		3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9AEAB91C5883F00062A912 /* MessageHandler.swift */; };
+		3BDB8C6B1C5D486F003D5BAC /* SRCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BDB8C6A1C5D486F003D5BAC /* SRCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDB8C721C5D486F003D5BAC /* SRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDB8C681C5D486F003D5BAC /* SRCore.framework */; };
+		3BDB8C791C5D486F003D5BAC /* SRCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB8C781C5D486F003D5BAC /* SRCoreTests.swift */; };
+		3BDB8C7D1C5D486F003D5BAC /* SRCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDB8C681C5D486F003D5BAC /* SRCore.framework */; };
+		3BDB8C7E1C5D486F003D5BAC /* SRCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3BDB8C681C5D486F003D5BAC /* SRCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3BDB8C851C5D4892003D5BAC /* SimpleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */; };
+		3BDB8C861C5D4956003D5BAC /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA51C3D861300E89117 /* BrightFutures.framework */; };
+		3BDB8C871C5D4956003D5BAC /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B504AA61C3D861300E89117 /* Result.framework */; };
 		3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF14981C3D80A200465FA3 /* AppDelegate.swift */; };
 		3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF149F1C3D80A200465FA3 /* Assets.xcassets */; };
 		3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */; };
-		3BDFB0281C5B16E20005ADE1 /* IssueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDFB0271C5B16E20005ADE1 /* IssueCoordinator.swift */; };
-		3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EC1C5416EA00FF9C9D /* Issue.swift */; };
-		3BF872EF1C541C3800FF9C9D /* SifterIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF872EE1C541C3800FF9C9D /* SifterIssue.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B4CC06F1C5D34A900201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4CC0631C5D34A800201B52;
+			remoteInfo = BugKit;
+		};
+		3B4CC0711C5D34A900201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BDF14941C3D80A200465FA3;
+			remoteInfo = Bugology;
+		};
+		3B4CC0771C5D34A900201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4CC0631C5D34A800201B52;
+			remoteInfo = BugKit;
+		};
+		3B4CC0AF1C5D38D000201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4CC0A31C5D38D000201B52;
+			remoteInfo = BugUIKit;
+		};
+		3B4CC0B11C5D38D000201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BDF14941C3D80A200465FA3;
+			remoteInfo = Bugology;
+		};
+		3B4CC0B71C5D38D000201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4CC0A31C5D38D000201B52;
+			remoteInfo = BugUIKit;
+		};
+		3B4CC0CC1C5D3E0800201B52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4CC0631C5D34A800201B52;
+			remoteInfo = BugKit;
+		};
+		3BDB8C731C5D486F003D5BAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BDB8C671C5D486F003D5BAC;
+			remoteInfo = SRCore;
+		};
+		3BDB8C751C5D486F003D5BAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BDF14941C3D80A200465FA3;
+			remoteInfo = Bugology;
+		};
+		3BDB8C7B1C5D486F003D5BAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BDF148D1C3D80A200465FA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BDB8C671C5D486F003D5BAC;
+			remoteInfo = SRCore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3BDF14E51C3D82D900465FA3 /* Embed Frameworks */ = {
@@ -59,6 +152,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3BDB8C7E1C5D486F003D5BAC /* SRCore.framework in Embed Frameworks */,
+				3B4CC0BA1C5D38D000201B52 /* BugUIKit.framework in Embed Frameworks */,
+				3B4CC07A1C5D34A900201B52 /* BugKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +171,18 @@
 		3B42B1111C51E98900EC99BD /* IssuesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesCoordinator.swift; sourceTree = "<group>"; };
 		3B42B1131C51EBC300EC99BD /* IssuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
 		3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
+		3B4CC0641C5D34A800201B52 /* BugKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4CC0661C5D34A900201B52 /* BugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugKit.h; sourceTree = "<group>"; };
+		3B4CC0681C5D34A900201B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4CC06D1C5D34A900201B52 /* BugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4CC0741C5D34A900201B52 /* BugKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugKitTests.swift; sourceTree = "<group>"; };
+		3B4CC0761C5D34A900201B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BugUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4CC0A61C5D38D000201B52 /* BugUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BugUIKit.h; sourceTree = "<group>"; };
+		3B4CC0A81C5D38D000201B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4CC0AD1C5D38D000201B52 /* BugUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BugUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4CC0B41C5D38D000201B52 /* BugUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugUIKitTests.swift; sourceTree = "<group>"; };
+		3B4CC0B61C5D38D000201B52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B504AA51C3D861300E89117 /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		3B504AA61C3D861300E89117 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		3B57FA6C1C40230A00BD4055 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +197,7 @@
 		3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAddAccountMessage.swift; sourceTree = "<group>"; };
 		3B86075C1C419600009D20F4 /* SifterLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SifterLoginViewController.swift; sourceTree = "<group>"; };
 		3B86075E1C41F817009D20F4 /* LoginViewControllers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewControllers.storyboard; sourceTree = "<group>"; };
-		3B8607601C41FABF009D20F4 /* Services.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Services.xcassets; sourceTree = "<group>"; };
+		3B8607601C41FABF009D20F4 /* Services.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Services.xcassets; path = ../Bugology/Services.xcassets; sourceTree = "<group>"; };
 		3B8607621C42C425009D20F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3B8607651C4492B6009D20F4 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		3B8607691C44A2EA009D20F4 /* ClientFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientFactory.swift; sourceTree = "<group>"; };
@@ -103,6 +211,12 @@
 		3B9AEAB41C571EE70062A912 /* IssuesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssuesCell.xib; sourceTree = "<group>"; };
 		3B9AEAB71C5883BE0062A912 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		3B9AEAB91C5883F00062A912 /* MessageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHandler.swift; sourceTree = "<group>"; };
+		3BDB8C681C5D486F003D5BAC /* SRCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDB8C6A1C5D486F003D5BAC /* SRCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRCore.h; sourceTree = "<group>"; };
+		3BDB8C6C1C5D486F003D5BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BDB8C711C5D486F003D5BAC /* SRCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BDB8C781C5D486F003D5BAC /* SRCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRCoreTests.swift; sourceTree = "<group>"; };
+		3BDB8C7A1C5D486F003D5BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BDF14951C3D80A200465FA3 /* Bugology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bugology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF14981C3D80A200465FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BDF149F1C3D80A200465FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,12 +228,65 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B4CC0601C5D34A800201B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC09D1C5D35FB00201B52 /* BrightFutures.framework in Frameworks */,
+				3B4CC09E1C5D35FB00201B52 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC06A1C5D34A900201B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC06E1C5D34A900201B52 /* BugKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0A01C5D38D000201B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0CB1C5D397300201B52 /* BugKit.framework in Frameworks */,
+				3BDB8C861C5D4956003D5BAC /* BrightFutures.framework in Frameworks */,
+				3BDB8C871C5D4956003D5BAC /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0AA1C5D38D000201B52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0AE1C5D38D000201B52 /* BugUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C641C5D486F003D5BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C6E1C5D486F003D5BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDB8C721C5D486F003D5BAC /* SRCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BDF14921C3D80A200465FA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3B504AA71C3D861300E89117 /* BrightFutures.framework in Frameworks */,
 				3B504AA81C3D861300E89117 /* Result.framework in Frameworks */,
+				3B4CC0B91C5D38D000201B52 /* BugUIKit.framework in Frameworks */,
+				3B4CC0791C5D34A900201B52 /* BugKit.framework in Frameworks */,
+				3BDB8C7D1C5D486F003D5BAC /* SRCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +333,54 @@
 				3B4CC05D1C5CD55200201B52 /* NetworkOperation.swift */,
 			);
 			name = Operations;
+			path = ../Bugology;
+			sourceTree = "<group>";
+		};
+		3B4CC0651C5D34A800201B52 /* BugKit */ = {
+			isa = PBXGroup;
+			children = (
+				3B8607601C41FABF009D20F4 /* Services.xcassets */,
+				3B8607791C4571BC009D20F4 /* Categories */,
+				3B9AEAB61C5883AA0062A912 /* Events */,
+				3B8607681C44A2D7009D20F4 /* Factories */,
+				3B57FA761C4050B300BD4055 /* Models */,
+				3B4CC05C1C5CD51800201B52 /* Operations */,
+				3B8607741C455900009D20F4 /* Repositories */,
+				3B86076B1C44A34F009D20F4 /* Services */,
+				3B57FA7D1C40604700BD4055 /* Utilities */,
+				3B4CC0661C5D34A900201B52 /* BugKit.h */,
+				3B4CC0681C5D34A900201B52 /* Info.plist */,
+			);
+			path = BugKit;
+			sourceTree = "<group>";
+		};
+		3B4CC0731C5D34A900201B52 /* BugKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B4CC0741C5D34A900201B52 /* BugKitTests.swift */,
+				3B4CC0761C5D34A900201B52 /* Info.plist */,
+			);
+			path = BugKitTests;
+			sourceTree = "<group>";
+		};
+		3B4CC0A51C5D38D000201B52 /* BugUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA6B1C4022F700BD4055 /* View Controllers */,
+				3B9AEAB31C571ECC0062A912 /* Views */,
+				3B4CC0A61C5D38D000201B52 /* BugUIKit.h */,
+				3B4CC0A81C5D38D000201B52 /* Info.plist */,
+			);
+			path = BugUIKit;
+			sourceTree = "<group>";
+		};
+		3B4CC0B31C5D38D000201B52 /* BugUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B4CC0B41C5D38D000201B52 /* BugUIKitTests.swift */,
+				3B4CC0B61C5D38D000201B52 /* Info.plist */,
+			);
+			path = BugUIKitTests;
 			sourceTree = "<group>";
 		};
 		3B504AA41C3D860800E89117 /* Frameworks */ = {
@@ -191,7 +406,6 @@
 			children = (
 				3BDF149F1C3D80A200465FA3 /* Assets.xcassets */,
 				3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */,
-				3B8607601C41FABF009D20F4 /* Services.xcassets */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -206,6 +420,7 @@
 				3B3B8D8C1C51E6F4003F082C /* Projects */,
 			);
 			name = "View Controllers";
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B57FA6E1C402D4C00BD4055 /* Coordinators */ = {
@@ -232,16 +447,17 @@
 				3B57FA811C40653300BD4055 /* Service.swift */,
 			);
 			name = Models;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B57FA7D1C40604700BD4055 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3B57FA7E1C40605000BD4055 /* Data Sources */,
 				3B219E6A1C4FBD3F00457A9E /* PresentationContext.swift */,
 				3B219E6C1C4FBD7400457A9E /* MockPresentationContext.swift */,
 			);
 			name = Utilities;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B57FA7E1C40605000BD4055 /* Data Sources */ = {
@@ -250,6 +466,7 @@
 				3B57FA7F1C40605B00BD4055 /* SimpleDataSource.swift */,
 			);
 			name = "Data Sources";
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B86075B1C4195F1009D20F4 /* Login View Controllers */ = {
@@ -262,19 +479,13 @@
 			name = "Login View Controllers";
 			sourceTree = "<group>";
 		};
-		3B8607671C449614009D20F4 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			sourceTree = "<group>";
-		};
 		3B8607681C44A2D7009D20F4 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				3B8607691C44A2EA009D20F4 /* ClientFactory.swift */,
 			);
 			name = Factories;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B86076B1C44A34F009D20F4 /* Services */ = {
@@ -286,6 +497,7 @@
 				3B86076E1C44A36E009D20F4 /* SifterClient.swift */,
 			);
 			name = Services;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B8607741C455900009D20F4 /* Repositories */ = {
@@ -295,6 +507,7 @@
 				3B8607771C455A64009D20F4 /* UserDefaultsAccountRepository.swift */,
 			);
 			name = Repositories;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B8607791C4571BC009D20F4 /* Categories */ = {
@@ -303,6 +516,7 @@
 				3B86077A1C4571C9009D20F4 /* Distinct.swift */,
 			);
 			name = Categories;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B9AEAB31C571ECC0062A912 /* Views */ = {
@@ -311,6 +525,7 @@
 				3B9AEAB41C571EE70062A912 /* IssuesCell.xib */,
 			);
 			name = Views;
+			path = ../Bugology;
 			sourceTree = "<group>";
 		};
 		3B9AEAB61C5883AA0062A912 /* Events */ = {
@@ -321,12 +536,38 @@
 				3B6959941C59E19100926115 /* OpenAddAccountMessage.swift */,
 			);
 			name = Events;
+			path = ../Bugology;
+			sourceTree = "<group>";
+		};
+		3BDB8C691C5D486F003D5BAC /* SRCore */ = {
+			isa = PBXGroup;
+			children = (
+				3B57FA7E1C40605000BD4055 /* Data Sources */,
+				3BDB8C6A1C5D486F003D5BAC /* SRCore.h */,
+				3BDB8C6C1C5D486F003D5BAC /* Info.plist */,
+			);
+			path = SRCore;
+			sourceTree = "<group>";
+		};
+		3BDB8C771C5D486F003D5BAC /* SRCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BDB8C781C5D486F003D5BAC /* SRCoreTests.swift */,
+				3BDB8C7A1C5D486F003D5BAC /* Info.plist */,
+			);
+			path = SRCoreTests;
 			sourceTree = "<group>";
 		};
 		3BDF148C1C3D80A200465FA3 = {
 			isa = PBXGroup;
 			children = (
 				3BDF14971C3D80A200465FA3 /* Bugology */,
+				3B4CC0651C5D34A800201B52 /* BugKit */,
+				3B4CC0731C5D34A900201B52 /* BugKitTests */,
+				3B4CC0A51C5D38D000201B52 /* BugUIKit */,
+				3B4CC0B31C5D38D000201B52 /* BugUIKitTests */,
+				3BDB8C691C5D486F003D5BAC /* SRCore */,
+				3BDB8C771C5D486F003D5BAC /* SRCoreTests */,
 				3B504AA41C3D860800E89117 /* Frameworks */,
 				3BDF14961C3D80A200465FA3 /* Products */,
 			);
@@ -336,6 +577,12 @@
 			isa = PBXGroup;
 			children = (
 				3BDF14951C3D80A200465FA3 /* Bugology.app */,
+				3B4CC0641C5D34A800201B52 /* BugKit.framework */,
+				3B4CC06D1C5D34A900201B52 /* BugKitTests.xctest */,
+				3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */,
+				3B4CC0AD1C5D38D000201B52 /* BugUIKitTests.xctest */,
+				3BDB8C681C5D486F003D5BAC /* SRCore.framework */,
+				3BDB8C711C5D486F003D5BAC /* SRCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -344,18 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				3B57FA6A1C4022DF00BD4055 /* Assets */,
-				3B8607791C4571BC009D20F4 /* Categories */,
-				3B9AEAB61C5883AA0062A912 /* Events */,
 				3B57FA6E1C402D4C00BD4055 /* Coordinators */,
-				3B8607681C44A2D7009D20F4 /* Factories */,
-				3B57FA761C4050B300BD4055 /* Models */,
-				3B4CC05C1C5CD51800201B52 /* Operations */,
-				3B8607741C455900009D20F4 /* Repositories */,
-				3B86076B1C44A34F009D20F4 /* Services */,
-				3B57FA6B1C4022F700BD4055 /* View Controllers */,
-				3B9AEAB31C571ECC0062A912 /* Views */,
-				3B8607671C449614009D20F4 /* Services */,
-				3B57FA7D1C40604700BD4055 /* Utilities */,
 				3B57FA691C4022D100BD4055 /* Support Files */,
 			);
 			path = Bugology;
@@ -363,7 +599,146 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		3B4CC0611C5D34A800201B52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0A71C5D38D000201B52 /* BugUIKit.h in Headers */,
+				3B4CC0671C5D34A900201B52 /* BugKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0A11C5D38D000201B52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C651C5D486F003D5BAC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDB8C6B1C5D486F003D5BAC /* SRCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		3B4CC0631C5D34A800201B52 /* BugKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4CC07B1C5D34A900201B52 /* Build configuration list for PBXNativeTarget "BugKit" */;
+			buildPhases = (
+				3B4CC05F1C5D34A800201B52 /* Sources */,
+				3B4CC0601C5D34A800201B52 /* Frameworks */,
+				3B4CC0611C5D34A800201B52 /* Headers */,
+				3B4CC0621C5D34A800201B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BugKit;
+			productName = BugKit;
+			productReference = 3B4CC0641C5D34A800201B52 /* BugKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B4CC06C1C5D34A900201B52 /* BugKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4CC07E1C5D34A900201B52 /* Build configuration list for PBXNativeTarget "BugKitTests" */;
+			buildPhases = (
+				3B4CC0691C5D34A900201B52 /* Sources */,
+				3B4CC06A1C5D34A900201B52 /* Frameworks */,
+				3B4CC06B1C5D34A900201B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4CC0701C5D34A900201B52 /* PBXTargetDependency */,
+				3B4CC0721C5D34A900201B52 /* PBXTargetDependency */,
+			);
+			name = BugKitTests;
+			productName = BugKitTests;
+			productReference = 3B4CC06D1C5D34A900201B52 /* BugKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B4CC0A31C5D38D000201B52 /* BugUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4CC0BB1C5D38D000201B52 /* Build configuration list for PBXNativeTarget "BugUIKit" */;
+			buildPhases = (
+				3B4CC09F1C5D38D000201B52 /* Sources */,
+				3B4CC0A01C5D38D000201B52 /* Frameworks */,
+				3B4CC0A11C5D38D000201B52 /* Headers */,
+				3B4CC0A21C5D38D000201B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4CC0CD1C5D3E0800201B52 /* PBXTargetDependency */,
+			);
+			name = BugUIKit;
+			productName = BugUIKit;
+			productReference = 3B4CC0A41C5D38D000201B52 /* BugUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3B4CC0AC1C5D38D000201B52 /* BugUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B4CC0BE1C5D38D000201B52 /* Build configuration list for PBXNativeTarget "BugUIKitTests" */;
+			buildPhases = (
+				3B4CC0A91C5D38D000201B52 /* Sources */,
+				3B4CC0AA1C5D38D000201B52 /* Frameworks */,
+				3B4CC0AB1C5D38D000201B52 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4CC0B01C5D38D000201B52 /* PBXTargetDependency */,
+				3B4CC0B21C5D38D000201B52 /* PBXTargetDependency */,
+			);
+			name = BugUIKitTests;
+			productName = BugUIKitTests;
+			productReference = 3B4CC0AD1C5D38D000201B52 /* BugUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BDB8C671C5D486F003D5BAC /* SRCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BDB8C7F1C5D486F003D5BAC /* Build configuration list for PBXNativeTarget "SRCore" */;
+			buildPhases = (
+				3BDB8C631C5D486F003D5BAC /* Sources */,
+				3BDB8C641C5D486F003D5BAC /* Frameworks */,
+				3BDB8C651C5D486F003D5BAC /* Headers */,
+				3BDB8C661C5D486F003D5BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SRCore;
+			productName = SRCore;
+			productReference = 3BDB8C681C5D486F003D5BAC /* SRCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3BDB8C701C5D486F003D5BAC /* SRCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BDB8C821C5D486F003D5BAC /* Build configuration list for PBXNativeTarget "SRCoreTests" */;
+			buildPhases = (
+				3BDB8C6D1C5D486F003D5BAC /* Sources */,
+				3BDB8C6E1C5D486F003D5BAC /* Frameworks */,
+				3BDB8C6F1C5D486F003D5BAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BDB8C741C5D486F003D5BAC /* PBXTargetDependency */,
+				3BDB8C761C5D486F003D5BAC /* PBXTargetDependency */,
+			);
+			name = SRCoreTests;
+			productName = SRCoreTests;
+			productReference = 3BDB8C711C5D486F003D5BAC /* SRCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3BDF14941C3D80A200465FA3 /* Bugology */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BDF14BD1C3D80A300465FA3 /* Build configuration list for PBXNativeTarget "Bugology" */;
@@ -379,6 +754,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B4CC0781C5D34A900201B52 /* PBXTargetDependency */,
+				3B4CC0B81C5D38D000201B52 /* PBXTargetDependency */,
+				3BDB8C7C1C5D486F003D5BAC /* PBXTargetDependency */,
 			);
 			name = Bugology;
 			productName = Bugology;
@@ -391,10 +769,31 @@
 		3BDF148D1C3D80A200465FA3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jonathan Bennett";
 				TargetAttributes = {
+					3B4CC0631C5D34A800201B52 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3B4CC06C1C5D34A900201B52 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3BDF14941C3D80A200465FA3;
+					};
+					3B4CC0A31C5D38D000201B52 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3B4CC0AC1C5D38D000201B52 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3BDF14941C3D80A200465FA3;
+					};
+					3BDB8C671C5D486F003D5BAC = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					3BDB8C701C5D486F003D5BAC = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 3BDF14941C3D80A200465FA3;
+					};
 					3BDF14941C3D80A200465FA3 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -414,18 +813,66 @@
 			projectRoot = "";
 			targets = (
 				3BDF14941C3D80A200465FA3 /* Bugology */,
+				3B4CC0631C5D34A800201B52 /* BugKit */,
+				3B4CC06C1C5D34A900201B52 /* BugKitTests */,
+				3B4CC0A31C5D38D000201B52 /* BugUIKit */,
+				3B4CC0AC1C5D38D000201B52 /* BugUIKitTests */,
+				3BDB8C671C5D486F003D5BAC /* SRCore */,
+				3BDB8C701C5D486F003D5BAC /* SRCoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3B4CC0621C5D34A800201B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC06B1C5D34A900201B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0A21C5D38D000201B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B065C041C5D597F005E4522 /* Services.xcassets in Resources */,
+				3B4CC0C51C5D38EF00201B52 /* LoginViewControllers.storyboard in Resources */,
+				3B4CC0C91C5D38EF00201B52 /* IssuesCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0AB1C5D38D000201B52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C661C5D486F003D5BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C6F1C5D486F003D5BAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BDF14931C3D80A200465FA3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B86075F1C41F817009D20F4 /* LoginViewControllers.storyboard in Resources */,
-				3B9AEAB51C571EE70062A912 /* IssuesCell.xib in Resources */,
-				3B8607611C41FABF009D20F4 /* Services.xcassets in Resources */,
 				3BDF14A31C3D80A200465FA3 /* LaunchScreen.storyboard in Resources */,
 				3BDF14A01C3D80A200465FA3 /* Assets.xcassets in Resources */,
 			);
@@ -480,50 +927,148 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B4CC05F1C5D34A800201B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0891C5D34F200201B52 /* UserDefaultsAccountRepository.swift in Sources */,
+				3B4CC08D1C5D350500201B52 /* Account.swift in Sources */,
+				3B4CC08E1C5D350500201B52 /* CoordinatorsCollection.swift in Sources */,
+				3B4CC08C1C5D350500201B52 /* SifterProject.swift in Sources */,
+				3B4CC0991C5D35D100201B52 /* Message.swift in Sources */,
+				3B4CC09A1C5D35D100201B52 /* MessageHandler.swift in Sources */,
+				3B4CC08F1C5D350500201B52 /* Issue.swift in Sources */,
+				3B4CC08A1C5D34F900201B52 /* NetworkOperation.swift in Sources */,
+				3B4CC0821C5D34BE00201B52 /* PresentationContext.swift in Sources */,
+				3B4CC0841C5D34DA00201B52 /* Client.swift in Sources */,
+				3B4CC0921C5D350F00201B52 /* ClientFactory.swift in Sources */,
+				3B4CC0871C5D34DA00201B52 /* SifterClient.swift in Sources */,
+				3B4CC08B1C5D350500201B52 /* SifterIssue.swift in Sources */,
+				3B4CC09B1C5D35D100201B52 /* OpenAddAccountMessage.swift in Sources */,
+				3B4CC0911C5D350500201B52 /* Service.swift in Sources */,
+				3B4CC0861C5D34DA00201B52 /* GitHubClient.swift in Sources */,
+				3B4CC0831C5D34BE00201B52 /* MockPresentationContext.swift in Sources */,
+				3B4CC09C1C5D35DA00201B52 /* Distinct.swift in Sources */,
+				3B4CC0851C5D34DA00201B52 /* BitBucketClient.swift in Sources */,
+				3B4CC0881C5D34F200201B52 /* AccountRepository.swift in Sources */,
+				3B4CC0901C5D350500201B52 /* Project.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0691C5D34A900201B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0751C5D34A900201B52 /* BugKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC09F1C5D38D000201B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0C71C5D38EF00201B52 /* LoginViewController.swift in Sources */,
+				3B4CC0C61C5D38EF00201B52 /* SifterLoginViewController.swift in Sources */,
+				3B4CC0C41C5D38EF00201B52 /* IssuesViewController.swift in Sources */,
+				3B4CC0C21C5D38EF00201B52 /* AccountsViewController.swift in Sources */,
+				3B4CC0C31C5D38EF00201B52 /* AddAccountViewController.swift in Sources */,
+				3B4CC0C11C5D38EF00201B52 /* ApplicationViewController.swift in Sources */,
+				3B4CC0C81C5D38EF00201B52 /* ProjectsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4CC0A91C5D38D000201B52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4CC0B51C5D38D000201B52 /* BugUIKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C631C5D486F003D5BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDB8C851C5D4892003D5BAC /* SimpleDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BDB8C6D1C5D486F003D5BAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDB8C791C5D486F003D5BAC /* SRCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BDF14911C3D80A200465FA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B219E661C4D55B800457A9E /* ProjectsViewController.swift in Sources */,
-				3BF872EF1C541C3800FF9C9D /* SifterIssue.swift in Sources */,
-				3B219E621C4D547300457A9E /* ProjectsCoordinator.swift in Sources */,
-				3B219E6D1C4FBD7400457A9E /* MockPresentationContext.swift in Sources */,
-				3B8607631C42C425009D20F4 /* LoginViewController.swift in Sources */,
-				3B8607661C4492B6009D20F4 /* Account.swift in Sources */,
-				3BF872ED1C5416EA00FF9C9D /* Issue.swift in Sources */,
-				3B9AEAB81C5883BE0062A912 /* Message.swift in Sources */,
-				3B8607781C455A64009D20F4 /* UserDefaultsAccountRepository.swift in Sources */,
-				3B6959951C59E19100926115 /* OpenAddAccountMessage.swift in Sources */,
-				3B57FA801C40605B00BD4055 /* SimpleDataSource.swift in Sources */,
-				3B86077B1C4571C9009D20F4 /* Distinct.swift in Sources */,
-				3B57FA721C40452500BD4055 /* AccountsCoordinator.swift in Sources */,
-				3B86076A1C44A2EA009D20F4 /* ClientFactory.swift in Sources */,
+				3B065C011C5D56E5005E4522 /* IssueCoordinator.swift in Sources */,
+				3B065C001C5D56E5005E4522 /* AddAccountCoordinator.swift in Sources */,
 				3BDF14991C3D80A200465FA3 /* AppDelegate.swift in Sources */,
-				3B219E691C4F590200457A9E /* SifterProject.swift in Sources */,
-				3B4CC05E1C5CD55200201B52 /* NetworkOperation.swift in Sources */,
-				3B57FA751C40502C00BD4055 /* AccountsViewController.swift in Sources */,
-				3B57FA6D1C40230A00BD4055 /* ApplicationViewController.swift in Sources */,
-				3B9AEABA1C5883F00062A912 /* MessageHandler.swift in Sources */,
-				3B86076D1C44A360009D20F4 /* Client.swift in Sources */,
-				3BDFB0281C5B16E20005ADE1 /* IssueCoordinator.swift in Sources */,
-				3B86076F1C44A36E009D20F4 /* SifterClient.swift in Sources */,
-				3B57FA821C40653300BD4055 /* Service.swift in Sources */,
-				3B219E641C4D558800457A9E /* Project.swift in Sources */,
-				3B42B1121C51E98900EC99BD /* IssuesCoordinator.swift in Sources */,
-				3B57FA781C4050C300BD4055 /* CoordinatorsCollection.swift in Sources */,
-				3B8607761C455911009D20F4 /* AccountRepository.swift in Sources */,
-				3B42B1141C51EBC300EC99BD /* IssuesViewController.swift in Sources */,
-				3B57FA7A1C40593700BD4055 /* AddAccountCoordinator.swift in Sources */,
-				3B57FA7C1C405CAF00BD4055 /* AddAccountViewController.swift in Sources */,
-				3B8607711C44A3F0009D20F4 /* GitHubClient.swift in Sources */,
-				3B86075D1C419600009D20F4 /* SifterLoginViewController.swift in Sources */,
-				3B219E6B1C4FBD4000457A9E /* PresentationContext.swift in Sources */,
-				3B8607731C44A40A009D20F4 /* BitBucketClient.swift in Sources */,
-				3B57FA701C402D5900BD4055 /* ApplicationCoordinator.swift in Sources */,
+				3B065BFF1C5D56E5005E4522 /* AccountsCoordinator.swift in Sources */,
+				3B065C021C5D56E5005E4522 /* IssuesCoordinator.swift in Sources */,
+				3B065BFE1C5D56E5005E4522 /* ApplicationCoordinator.swift in Sources */,
+				3B065C031C5D56E5005E4522 /* ProjectsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B4CC0701C5D34A900201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4CC0631C5D34A800201B52 /* BugKit */;
+			targetProxy = 3B4CC06F1C5D34A900201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0721C5D34A900201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BDF14941C3D80A200465FA3 /* Bugology */;
+			targetProxy = 3B4CC0711C5D34A900201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0781C5D34A900201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4CC0631C5D34A800201B52 /* BugKit */;
+			targetProxy = 3B4CC0771C5D34A900201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0B01C5D38D000201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4CC0A31C5D38D000201B52 /* BugUIKit */;
+			targetProxy = 3B4CC0AF1C5D38D000201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0B21C5D38D000201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BDF14941C3D80A200465FA3 /* Bugology */;
+			targetProxy = 3B4CC0B11C5D38D000201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0B81C5D38D000201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4CC0A31C5D38D000201B52 /* BugUIKit */;
+			targetProxy = 3B4CC0B71C5D38D000201B52 /* PBXContainerItemProxy */;
+		};
+		3B4CC0CD1C5D3E0800201B52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4CC0631C5D34A800201B52 /* BugKit */;
+			targetProxy = 3B4CC0CC1C5D3E0800201B52 /* PBXContainerItemProxy */;
+		};
+		3BDB8C741C5D486F003D5BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BDB8C671C5D486F003D5BAC /* SRCore */;
+			targetProxy = 3BDB8C731C5D486F003D5BAC /* PBXContainerItemProxy */;
+		};
+		3BDB8C761C5D486F003D5BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BDF14941C3D80A200465FA3 /* Bugology */;
+			targetProxy = 3BDB8C751C5D486F003D5BAC /* PBXContainerItemProxy */;
+		};
+		3BDB8C7C1C5D486F003D5BAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BDB8C671C5D486F003D5BAC /* SRCore */;
+			targetProxy = 3BDB8C7B1C5D486F003D5BAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3BDF14A11C3D80A200465FA3 /* LaunchScreen.storyboard */ = {
@@ -537,6 +1082,214 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3B4CC07C1C5D34A900201B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BugKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3B4CC07D1C5D34A900201B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BugKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B4CC07F1C5D34A900201B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BugKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Debug;
+		};
+		3B4CC0801C5D34A900201B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BugKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Release;
+		};
+		3B4CC0BC1C5D38D000201B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BugUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3B4CC0BD1C5D38D000201B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BugUIKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugUIKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3B4CC0BF1C5D38D000201B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BugUIKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Debug;
+		};
+		3B4CC0C01C5D38D000201B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BugUIKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.BugUIKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Release;
+		};
+		3BDB8C801C5D486F003D5BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SRCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.SRCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3BDB8C811C5D486F003D5BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SRCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.SRCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3BDB8C831C5D486F003D5BAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SRCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.SRCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Debug;
+		};
+		3BDB8C841C5D486F003D5BAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SRCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbennett.SRCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bugology.app/Bugology";
+			};
+			name = Release;
+		};
 		3BDF14BB1C3D80A300465FA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -657,6 +1410,60 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B4CC07B1C5D34A900201B52 /* Build configuration list for PBXNativeTarget "BugKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4CC07C1C5D34A900201B52 /* Debug */,
+				3B4CC07D1C5D34A900201B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4CC07E1C5D34A900201B52 /* Build configuration list for PBXNativeTarget "BugKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4CC07F1C5D34A900201B52 /* Debug */,
+				3B4CC0801C5D34A900201B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4CC0BB1C5D38D000201B52 /* Build configuration list for PBXNativeTarget "BugUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4CC0BC1C5D38D000201B52 /* Debug */,
+				3B4CC0BD1C5D38D000201B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B4CC0BE1C5D38D000201B52 /* Build configuration list for PBXNativeTarget "BugUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4CC0BF1C5D38D000201B52 /* Debug */,
+				3B4CC0C01C5D38D000201B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BDB8C7F1C5D486F003D5BAC /* Build configuration list for PBXNativeTarget "SRCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BDB8C801C5D486F003D5BAC /* Debug */,
+				3BDB8C811C5D486F003D5BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BDB8C821C5D486F003D5BAC /* Build configuration list for PBXNativeTarget "SRCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BDB8C831C5D486F003D5BAC /* Debug */,
+				3BDB8C841C5D486F003D5BAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3BDF14901C3D80A200465FA3 /* Build configuration list for PBXProject "Bugology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

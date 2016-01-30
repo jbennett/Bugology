@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BugKit
 
 public class ApplicationCoordinator {
 
@@ -14,6 +15,8 @@ public class ApplicationCoordinator {
   let rootViewController = UINavigationController()
   let childCoordinators = CoordinatorsCollection()
   public let nextHandler: MessageHandler? = nil
+
+  public init() {}
 
   public func installIntoWindow(window: UIWindow) {
       window.rootViewController = rootViewController

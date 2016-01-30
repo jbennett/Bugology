@@ -11,7 +11,7 @@ import UIKit
 public class SimpleDataSource<T>: NSObject, UITableViewDataSource {
 
   var tableView: UITableView?
-  var data: [T] {
+  public var data: [T] {
     didSet {
       self.tableView?.reloadData()
     }
